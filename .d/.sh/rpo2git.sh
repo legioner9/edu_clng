@@ -1,10 +1,10 @@
 #!/bin/bash
 
-fn_vewthhg5231vdsfv454gfvs(){
+fn_vethhg5231vdsf4gfvs(){
     
     DDir=$(pwd)
     # aer="aer_foe"
-    aer="edu_lnx"
+    aer="edu_clng"
 
     cd "$HOME/$aer"
     
@@ -57,4 +57,4 @@ fn_vewthhg5231vdsfv454gfvs(){
     
 }
 
-fn_vewthhg5231vdsfv454gfvs @
+fn_vethhg5231vdsf4gfvs @
