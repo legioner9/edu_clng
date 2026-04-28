@@ -38,6 +38,7 @@ fn_11604_52044(){
     
     local arg1_11604_52044="$1"
     local arg2_11604_52044="$2"
+    local arg3_11604_52044="$3"
     
     if [[ -z "${arg2_11604_52044}" ]];then
         echo -e "${ECHO_RET1}in file://$fl_pth_fn_11604_52044 , line=${LINENO}  ARG2_ISEMPTY, return 1${NRM}" >&2
@@ -71,9 +72,21 @@ fn_11604_52044(){
     echo "cp -r ${dr_pth_fn_11604_52044}/_.d ${result_dr}"
     cp -r ${dr_pth_fn_11604_52044}/_.d ${result_dr}
     
+    if [[ -n "${arg3_11604_52044}" ]];then
+        
+        echo "main.c -> ${arg3_11604_52044} as arg3"
+        mv ${result_dr}/main.c ${result_dr}/${arg3_11604_52044}
+
+        # l_02_s2f :: reciver_string: $1 inserter_string: $2 [@ - empty string] in reciver_result_file: $3
+        l_02_s2f "main.c" ${arg3_11604_52044} ${result_dr}/makefile
+        
+    fi
+    
     lfoe_gig_sh ${result_dr} start.sh
     
     # l_02_fs2f ins.f {{body}} rcv.f
+    # l_02_s2f :: reciver_string: $1 inserter_string: $2 [@ - empty string] in reciver_result_file: $3
+    
     
     l_02_fs2f "${arg2_11604_52044}" {{body}}  ${result_dr}/start.sh
     
