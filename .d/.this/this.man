@@ -59,3 +59,5 @@ https://selectel.ru/blog/ssh-authentication/
     PASSWORD="your_password"
 
     sshpass -p "$PASSWORD" ssh "$USER"@"$HOST" "$COMMAND"
+
+    alt
