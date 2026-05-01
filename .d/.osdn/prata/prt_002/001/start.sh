@@ -1,11 +1,11 @@
 #!/bin/bash
 
-fn_8960_18047(){
+fn_10309_28132(){
 
-    local fl_pth_fn_8960_18047="${HOME}/edu_clng/.d/.osdn/prata/prt_002/001/start.sh"
-    local dr_pth_fn_8960_18047=$(dirname ${HOME}/edu_clng/.d/.osdn/prata/prt_002/001/start.sh)
-    local fl_nm_fn_8960_18047=$(basename ${HOME}/edu_clng/.d/.osdn/prata/prt_002/001/start.sh)
-    local rnd=8960_18047
+    local fl_pth_fn_10309_28132="${HOME}/edu_clng/.d/.osdn/prata/prt_002/001/start.sh"
+    local dr_pth_fn_10309_28132=$(dirname ${HOME}/edu_clng/.d/.osdn/prata/prt_002/001/start.sh)
+    local fl_nm_fn_10309_28132=$(basename ${HOME}/edu_clng/.d/.osdn/prata/prt_002/001/start.sh)
+    local rnd=10309_28132
 
         [[ "$1" == "-h" ]] && {
         echo -e "
@@ -25,9 +25,9 @@ fn_8960_18047(){
 
     make hello
     
-    ./hello.exe
+    ./hello.cxe
     return 0
 
 }
 
-fn_8960_18047 $@
+fn_10309_28132 $@

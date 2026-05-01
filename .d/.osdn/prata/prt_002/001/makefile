@@ -1,2 +1,2 @@
-hello: file.cc 
-	gcc -o hello file.cc 
+hello: platinum.c 
+	gcc -o hello.cxe platinum.c 

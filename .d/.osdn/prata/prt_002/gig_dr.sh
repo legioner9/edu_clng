@@ -1,16 +1,16 @@
 #!/bin/bash
 
-fn_5394_21763(){
+fn_19465_2227(){
     
-    local pth_to_gig_sh_fn_5394_21763="${HOME}/edu_clng/.d/.osdn/prata/prt_002/gig_dr.sh"
+    local pth_to_gig_sh_fn_19465_2227="${HOME}/edu_clng/.d/.osdn/prata/prt_002/gig_dr.sh"
     
-    if [[ -z ${pth_to_gig_sh_fn_5394_21763} ]];then
+    if [[ -z ${pth_to_gig_sh_fn_19465_2227} ]];then
         echo -e "${ECHO_RET1}in file://$fl_pth_fn_11604_520 , line=${LINENO}  pth_to_gig_sh_fn NOT_DEFINE, return 1${NRM}" >&2
         return 1
     fi
     
-    if [[ ! -f ${pth_to_gig_sh_fn_5394_21763} ]];then
-        echo -e "${ECHO_RET1}in file://$fl_pth_fn_11604_520 , line=${LINENO}  $pth_to_gig_sh_fn_5394_21763 NOT_FILE, return 1${NRM}" >&2
+    if [[ ! -f ${pth_to_gig_sh_fn_19465_2227} ]];then
+        echo -e "${ECHO_RET1}in file://$fl_pth_fn_11604_520 , line=${LINENO}  $pth_to_gig_sh_fn_19465_2227 NOT_FILE, return 1${NRM}" >&2
         return 1
     fi
     
@@ -21,64 +21,65 @@ fn_5394_21763(){
         doing :: create dir cpy _.d with dr_nm=\$1 [[usually 00N]]
             and ins_file=\$2 [[!!unix style pth]] use l_02_fs2f() in start.sh generate in dr_nm
             use lfoe_gig_sh()
+            \$3 :: mv main.c -> \$3 
 
-            exa use gig :: . 'c:/Users/ProNout/aer_foe/.d/.frp/make_001.frp/gig_dr.sh' 001 ${HOME}/aer_foe/.d/.frp/make_001.frp/_.f.d/_.f.001
-            far use :: . ${HOME}/aer_foe/.d/.frp/make_001.frp/001/start.sh
+            exa use gig :: . 'c:/Users/ProNout/aer_foe/.d/.frp/make_001.frp/gig_dr.sh' 001 /c/Users/ProNout/aer_foe/.d/.frp/make_001.frp/_.f.d/_.f.001 file.c
+            far use :: . /c/Users/ProNout/aer_foe/.d/.frp/make_001.frp/001/start.sh
 
         "
         return 0
     }
     
-    local fl_pth_fn_5394_21763="${pth_to_gig_sh_fn_5394_21763}"
-    local dr_pth_fn_5394_21763=$(dirname ${pth_to_gig_sh_fn_5394_21763})
-    local fl_nm_fn_5394_21763=$(basename ${pth_to_gig_sh_fn_5394_21763})
+    local fl_pth_fn_19465_2227="${pth_to_gig_sh_fn_19465_2227}"
+    local dr_pth_fn_19465_2227=$(dirname ${pth_to_gig_sh_fn_19465_2227})
+    local fl_nm_fn_19465_2227=$(basename ${pth_to_gig_sh_fn_19465_2227})
     
     # l_02_fs2f ins.f {{body}} rcv.f
     # {{body}}
     
-    local arg1_5394_21763="$1"
-    local arg2_5394_21763="$2"
-    local arg3_5394_21763="$3"
+    local arg1_19465_2227="$1"
+    local arg2_19465_2227="$2"
+    local arg3_19465_2227="$3"
     
-    if [[ -z "${arg2_5394_21763}" ]];then
-        echo -e "${ECHO_RET1}in file://$fl_pth_fn_5394_21763 , line=${LINENO}  ARG2_ISEMPTY, return 1${NRM}" >&2
+    if [[ -z "${arg2_19465_2227}" ]];then
+        echo -e "${ECHO_RET1}in file://$fl_pth_fn_19465_2227 , line=${LINENO}  ARG2_ISEMPTY, return 1${NRM}" >&2
         return 1
     fi
     
-    if [[ ! -f ${arg2_5394_21763} ]];then
+    if [[ ! -f ${arg2_19465_2227} ]];then
         
-        echo -e "${ECHO_RET1}in file://$fl_pth_fn_5394_21763 , line=${LINENO} [[that insert file]] ARG2_NOTFILE::${arg2_5394_21763}, return 1${NRM}" >&2
-        return 1
-        
-    fi
-    
-    cd ${dr_pth_fn_5394_21763} || return 1
-    
-    if [[ -z "${arg1_5394_21763}" ]] ;then
-        
-        echo -e "${ECHO_RET1}in file://$fl_pth_fn_5394_21763 , line=${LINENO}  ARGS1_nm_dr is empty, return 1${NRM}" >&2
+        echo -e "${ECHO_RET1}in file://$fl_pth_fn_19465_2227 , line=${LINENO} [[that insert file]] ARG2_NOTFILE::${arg2_19465_2227}, return 1${NRM}" >&2
         return 1
         
     fi
     
-    local result_dr="${dr_pth_fn_5394_21763}/${arg1_5394_21763}"
+    cd ${dr_pth_fn_19465_2227} || return 1
+    
+    if [[ -z "${arg1_19465_2227}" ]] ;then
+        
+        echo -e "${ECHO_RET1}in file://$fl_pth_fn_19465_2227 , line=${LINENO}  ARGS1_nm_dr is empty, return 1${NRM}" >&2
+        return 1
+        
+    fi
+    
+    local result_dr="${dr_pth_fn_19465_2227}/${arg1_19465_2227}"
     
     if [[ -d "${result_dr}" ]] ;then
         
-        echo -e "${ECHO_RET1}in file://$fl_pth_fn_5394_21763 , line=${LINENO}  ${arg1_5394_21763} IS_DIR, return 1${NRM}" >&2
+        echo -e "${ECHO_RET1}in file://$fl_pth_fn_19465_2227 , line=${LINENO}  ${arg1_19465_2227} IS_DIR, return 1${NRM}" >&2
         return 1
         
     fi
-    echo "cp -r ${dr_pth_fn_5394_21763}/_.d ${result_dr}"
-    cp -r ${dr_pth_fn_5394_21763}/_.d ${result_dr}
+    echo "cp -r ${dr_pth_fn_19465_2227}/_.d ${result_dr}"
+    cp -r ${dr_pth_fn_19465_2227}/_.d ${result_dr}
     
-    if [[ -n "${arg3_5394_21763}" ]];then
+    if [[ -n "${arg3_19465_2227}" ]];then
         
-        echo "main.c -> ${arg3_5394_21763} as arg3"
-        mv ${result_dr}/main.c ${result_dr}/${arg3_5394_21763}
+        echo "main.c -> ${arg3_19465_2227} as arg3"
+        mv ${result_dr}/main.c ${result_dr}/${arg3_19465_2227}
         
         # l_02_s2f :: reciver_string: $1 inserter_string: $2 [@ - empty string] in reciver_result_file: $3
-        l_02_s2f "main.c" ${arg3_5394_21763} ${result_dr}/makefile
+        l_02_s2f "main.c" ${arg3_19465_2227} ${result_dr}/makefile
         
     fi
     
@@ -86,7 +87,7 @@ fn_5394_21763(){
     
     # l_02_fs2f ins.f {{body}} rcv.f
     
-    l_02_fs2f "${arg2_5394_21763}" {{body}}  ${result_dr}/start.sh
+    l_02_fs2f "${arg2_19465_2227}" {{body}}  ${result_dr}/start.sh
     
     cd ${result_dr} || return 1
     
@@ -103,4 +104,4 @@ fn_5394_21763(){
     
 }
 
-fn_5394_21763 $@
+fn_19465_2227 $@

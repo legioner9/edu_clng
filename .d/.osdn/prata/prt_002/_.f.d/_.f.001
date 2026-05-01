@@ -2,4 +2,4 @@
 
     make hello
     
-    ./hello.exe
+    ./hello.cxe
