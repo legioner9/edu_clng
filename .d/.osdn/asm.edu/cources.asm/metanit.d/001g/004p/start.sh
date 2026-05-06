@@ -24,14 +24,9 @@ fn_14814_15348() {
 
     cd $dr_pth_fn_14814_15348 || return 1
 
-    # make hello
-    # ./hello.axe
+    make hello
 
-    # rm hello.o hello.axe
-
-    as hello.s -o hello.o
-    ld hello.o -o hello.axe
-    ./hello.axe
+    ./hello.sxe
     echo $?
 
     return 0
