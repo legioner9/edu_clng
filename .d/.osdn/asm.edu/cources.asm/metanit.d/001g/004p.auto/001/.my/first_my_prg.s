@@ -3,7 +3,7 @@
 
 .section .text
 
-_start:
+_start
     movq $60 , %rax
     movq $33, %rdi
     syscall
