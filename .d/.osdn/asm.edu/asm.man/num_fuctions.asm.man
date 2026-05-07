@@ -1,11 +1,5 @@
-# Первая программа
-.globl _start
-
-.data 
-message: .asciz "Hello METANIT\n"
- 
-.text
-_start:
+# 1 - write(arg1, arg2, arg3)
+```asm
     movq $message, %rsi
     movq $1, %rdi
     movq $18, %rdx
@@ -17,6 +11,4 @@ _start:
     # define nun of return :: in rgstr %rdi
     movq $0, %rdi
     syscall 
-
-    movq $60, %rax
-    syscall
+```
