@@ -72,6 +72,8 @@ fn_17000_24872(){
     fi
     echo "cp -r ${dr_pth_fn_17000_24872}/_.d ${result_dr}"
     cp -r ${dr_pth_fn_17000_24872}/_.d ${result_dr}
+
+    
     
     if [[ -n "${arg3_17000_24872}" ]];then
         
@@ -80,6 +82,9 @@ fn_17000_24872(){
         
         # l_02_s2f :: reciver_string: $1 inserter_string: $2 [@ - empty string] in reciver_result_file: $3
         l_02_s2f "main.s" ${arg3_17000_24872} ${result_dr}/makefile
+        # l_02_fs2f ins.f {{body}} rcv.f
+        l_02_fs2f "${HOME}/aer_foe/.d/.frp/make_003_asm.frp/_hint.asm/hint" {{hint}} ${result_dr}/${arg3_17000_24872}
+
         
     fi
     
