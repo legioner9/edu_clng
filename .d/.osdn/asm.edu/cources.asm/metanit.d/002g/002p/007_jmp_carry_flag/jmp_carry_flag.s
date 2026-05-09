@@ -1,4 +1,4 @@
-# Первая программа
+# https://metanit.com/assembler/gas/2.6.php
 .globl _start
  
 .section .text
