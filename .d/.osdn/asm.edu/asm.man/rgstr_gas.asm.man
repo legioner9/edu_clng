@@ -9,3 +9,9 @@
     EDI (Destination index): указатель на место назначения в операциях с массивами
     EIP: указатель адреса следующей инструкции для выполнения
     EFLAGS: регистр флагов, содержит биты состояния процессора
+
+    %rdi :: return num
+    %rax :: run_num_function
+        num is:
+        60 exit ()
+        1 write (ptr_src[%rci] , num_descr[%rdi] , lenght_data[%rdx])
