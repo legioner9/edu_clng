@@ -1,0 +1,3 @@
+# jmp *pointer - jamp to value in pointer
+# movq $exit, %rbx - &exit->%rbx (?tk string is pointer)
+# jmp *%rbx - jamp to value in pointer in %rbx

@@ -1,0 +1,9 @@
+# .quad - pointer
+# .asciz - string
+
+
+```asm
+.data
+pointer: .quad exit
+message: .asciz "Hello METANIT\n"
+```

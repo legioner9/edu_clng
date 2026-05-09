@@ -1,4 +1,5 @@
 # Первая программа
+#! not work
 .globl _start
  
 .section .text
