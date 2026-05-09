@@ -1,0 +1,13 @@
+# Первая программа
+.globl _start
+ 
+.section .text
+_start:
+    movq $3, %rdi
+    movq $4, %rax
+    # mulq :: allways RAX : %rax*%rdi->%rax
+    mulq %rdi 
+    # %rax->%rdi as return num
+    movq %rax, %rdi
+    movq $60, %rax
+    syscall
