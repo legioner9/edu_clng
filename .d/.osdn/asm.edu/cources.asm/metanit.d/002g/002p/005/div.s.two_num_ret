@@ -3,7 +3,7 @@
  
 .section .text
 _start:
-    movq $23, %rax
+    movq $22, %rax
     # extend %rdx nuls
     movq $0, %rdx 
     movq $5, %rcx
@@ -11,7 +11,9 @@ _start:
     # RAX = RAX / RCX :: RAX =4 (результат), RDX = 2 (остаток)
     divq %rcx
     movq %rax, %rdi   # RDI = RAX = 4
-    movq %rdx, %rdi   # RDI = RDX = 2 returvn 2 (if 22->%rax)
+    movq $60, %rax
+    syscall
+    movq %rdx, %rdi   # RDI = RDX = 2
     movq $60, %rax
     syscall
 
