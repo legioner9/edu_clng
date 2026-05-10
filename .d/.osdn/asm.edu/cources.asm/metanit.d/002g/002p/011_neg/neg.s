@@ -1,4 +1,4 @@
-# Первая программа
+# https://metanit.com/assembler/gas/2.10.php
 # {{hint}}
 
 #   for syscall:
