@@ -1,4 +1,4 @@
-# https://metanit.com/assembler/gas/2.10.php
+# https://metanit.com/assembler/gas/2.11.php
 # {{hint}}
 
 #   for syscall:
@@ -31,14 +31,8 @@
  
 .section .text
 _start:
-    movq $12, %rbx
-    test $12, %rbx # 12==%rbx -> ZF=1
-    je zero 
-    movq $1, %rdi
-    jmp exit
-zero:
-    movq $0, %rdi
-exit:    
+    movq $-32, %rdi # -8 = FFFFFFE0h
+    sarq $4, %rdi # FFFFFFE0>>4 = FFFFFFFE = -2
+    addq $6, %rdi # 4
     movq $60, %rax
     syscall
-# not work return 1

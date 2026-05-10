@@ -1,4 +1,4 @@
-# https://metanit.com/assembler/gas/2.10.php
+# https://metanit.com/assembler/gas/2.11.php
 # {{hint}}
 
 #   for syscall:
@@ -31,14 +31,14 @@
  
 .section .text
 _start:
-    movq $12, %rbx
-    test $12, %rbx # 12==%rbx -> ZF=1
-    je zero 
-    movq $1, %rdi
-    jmp exit
-zero:
+    movb $69, %al
+    shlb $2, %al # 01000101<<2 = 00010100{2} = 20{10} [01 be reject :: CF=1]
+    # control CF carry 
+    jc curry_set # be return 1
     movq $0, %rdi
-exit:    
+    jmp exit
+curry_set:
+    movq $1, %rdi
+exit:
     movq $60, %rax
     syscall
-# not work return 1

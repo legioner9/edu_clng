@@ -1,4 +1,4 @@
-# https://metanit.com/assembler/gas/2.10.php
+# https://metanit.com/assembler/gas/2.11.php
 # {{hint}}
 
 #   for syscall:
@@ -31,14 +31,15 @@
  
 .section .text
 _start:
-    movq $12, %rbx
-    test $12, %rbx # 12==%rbx -> ZF=1
-    je zero 
-    movq $1, %rdi
-    jmp exit
-zero:
+    movq $70, %rdi # 2>>01000111 = 00010001{2} = 17{10} [11 is reset - last bit 1 CF=1]
+    # movq $69, %rdi # 2>>01000101 = 00010001{2} = 17{10} [01 is reset - last bit 0 CF=0]
+    shrq $2, %rdi
+
+    jc carry_set 
     movq $0, %rdi
-exit:    
+    jmp exit
+carry_set:
+    movq $1, %rdi
+exit:      
     movq $60, %rax
     syscall
-# not work return 1

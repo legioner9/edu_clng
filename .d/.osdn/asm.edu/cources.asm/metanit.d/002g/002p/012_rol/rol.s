@@ -1,4 +1,4 @@
-# https://metanit.com/assembler/gas/2.10.php
+# Первая программа
 # {{hint}}
 
 #   for syscall:
@@ -31,14 +31,9 @@
  
 .section .text
 _start:
-    movq $12, %rbx
-    test $12, %rbx # 12==%rbx -> ZF=1
-    je zero 
-    movq $1, %rdi
-    jmp exit
-zero:
-    movq $0, %rdi
-exit:    
+    movq $131, %rdi # in %al 10000011
+    rolb $2, %al # rol 10000011<-2-=00001110 = 14{10}
+
     movq $60, %rax
     syscall
-# not work return 1
+# not work :: return 131
