@@ -1,11 +1,11 @@
 #!/bin/bash
 
-fn_24668_27066(){
+fn_4737_32740(){
 
-    local fl_pth_fn_24668_27066="${HOME}/edu_clng/.d/.osdn/asm.edu/cources.asm/metanit.d/002g/002p/008_cmp/start.sh"
-    local dr_pth_fn_24668_27066=$(dirname ${HOME}/edu_clng/.d/.osdn/asm.edu/cources.asm/metanit.d/002g/002p/008_cmp/start.sh)
-    local fl_nm_fn_24668_27066=$(basename ${HOME}/edu_clng/.d/.osdn/asm.edu/cources.asm/metanit.d/002g/002p/008_cmp/start.sh)
-    local rnd=24668_27066
+    local fl_pth_fn_4737_32740="${HOME}/edu_clng/.d/.osdn/asm.edu/cources.asm/metanit.d/002g/002p/008_cmp_natnum/start.sh"
+    local dr_pth_fn_4737_32740=$(dirname ${HOME}/edu_clng/.d/.osdn/asm.edu/cources.asm/metanit.d/002g/002p/008_cmp_natnum/start.sh)
+    local fl_nm_fn_4737_32740=$(basename ${HOME}/edu_clng/.d/.osdn/asm.edu/cources.asm/metanit.d/002g/002p/008_cmp_natnum/start.sh)
+    local rnd=4737_32740
 
         [[ "$1" == "-h" ]] && {
         echo -e "
@@ -31,4 +31,4 @@ fn_24668_27066(){
 
 }
 
-fn_24668_27066 $@
+fn_4737_32740 $@
