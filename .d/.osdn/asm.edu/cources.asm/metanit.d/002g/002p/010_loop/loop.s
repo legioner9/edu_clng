@@ -1,4 +1,4 @@
-# https://metanit.com/assembler/gas/2.8.php
+# Первая программа
 # {{hint}}
 
 #   for syscall:
@@ -10,32 +10,32 @@
 #       %rdx - rem_after_div
 #   for mul:
 #       %rax - first_mul
+#   for loopq:
+#       %rcx - counter for loop
+
 #   for st_fn.1 write() [movq $1 %rax] args:
 #       %rsi - $message
 #       %rdi - num descriptor (0-STDIN | 1-STDOUT | 2-STDERR | ... )
 #       %rdx - lenght out
 #   for st_fn.60 exit() no args
+
 #   convent (free):
-#       %rcx - counter
+#       %rcx - [loopq]
 #       %rbx - 
+#       %rdx - [st_fn.1] [div] 
+#       %rsi - [st_fn.1]
+#       %rdi - [st_fn.1] [st_fn.60]
+#       %rax - [div] [mul]
 
 .globl _start
  
 .section .text
 _start:
-    movq $1, %rbx
 
-    # movq $2, %rbx # be ZF=0
-    movq $1, %rcx # be ZF=1
-
-    cmpq %rbx, %rcx 
-
-    movq $2, %rbx 
-    movq $4, %rcx
-
-    cmovneq %rbx, %rdi  # if ZF=0 :: return 2
-    cmoveq %rcx, %rdi   # if ZF=1 :: return 4
-
-    # movq $15, %rdi
+    movq $7, %rcx # init counter
+    movq $0, %rdi
+main_loop:
+    addq $2, %rdi # return %rcx*2->%rdi
+    loopq main_loop # if %rcx-1!=0 goto main_loop: else goto far
     movq $60, %rax
     syscall
