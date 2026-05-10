@@ -31,8 +31,9 @@
  
 .section .text
 _start:
-    movq $12, %rdi
-    xorq $6, %rdi # 1100 xor 0110 = 1010{2}=10{10}
-
+    movq %rdi, %rdi # %rdi=00000000 00000000 00000000 00000000
+    movq $12, %rdi # %rdi=00000000 00000000 00000000 00001100
+    notq %rdi # %rdi=18446744073709551603
+    subq $18446744073709551600, %rdi # =3
     movq $60, %rax
     syscall
