@@ -23,6 +23,19 @@
  
 .section .text
 _start:
-    movq $15, %rdi
+    movq $1, %rbx
+
+    # movq $2, %rbx # be ZF=0
+    movq $1, %rcx # be ZF=1
+
+    cmpq %rbx, %rcx 
+
+    movq $2, %rbx 
+    movq $4, %rcx
+
+    cmovneq %rbx, %rdi  # if ZF=0 :: return 2
+    cmoveq %rcx, %rdi   # if ZF=1 :: return 4
+
+    # movq $15, %rdi
     movq $60, %rax
     syscall

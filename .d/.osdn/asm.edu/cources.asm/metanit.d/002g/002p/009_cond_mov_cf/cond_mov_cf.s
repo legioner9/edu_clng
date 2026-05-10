@@ -18,11 +18,23 @@
 #   convent (free):
 #       %rcx - counter
 #       %rbx - 
+#       %rdx - 
 
 .globl _start
  
 .section .text
 _start:
-    movq $15, %rdi
+    movq $0xffffffffffffffff, %rcx # carry flag be CF=1
+    # movq $0xffffffffffffff0, %rcx # carry flag be CF=0
+    movq $1, %rdx
+    add %rcx, %rdx 
+
+    movq $2, %rcx
+    movq $4, %rdx
+
+    cmovncq %rcx, %rdi # %rdi=2 if CF=0
+    cmovcq %rdx, %rdi  # %rdi=4 if CF=1
+
+    # movq $15, %rdi
     movq $60, %rax
     syscall
