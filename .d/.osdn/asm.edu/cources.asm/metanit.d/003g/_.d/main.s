@@ -1,5 +1,9 @@
 # Первая программа
+# {{hint}}
+
 .globl _start
+
+.section .data
  
 .section .text
 _start:
