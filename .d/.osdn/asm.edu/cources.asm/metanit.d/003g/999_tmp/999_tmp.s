@@ -43,8 +43,8 @@
 .globl _start
 
 .section .data
-hello:
-     .ascii "Hello, World!\0"
+hello1:
+     .ascii "Hello, World!!\n"
 
 .section .text
 
@@ -58,7 +58,7 @@ _start:
 print_hello:
      mov $1, %rax # syscall: sys_write
      mov $1, %rdi # file descriptor: stdout
-     mov $hello, %rsi # string address
+     mov $hello1, %rsi # string address
      mov $13, %rdx # string length
      syscall # calls the kernel
      ret # returns to _start

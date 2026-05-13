@@ -9,7 +9,7 @@ message1: .asciz "Hello METANIT1\n"
 _start:
     movq $message, %rsi
     movq $1, %rdi
-    movq $18, %rdx
+    movq $15, %rdx
     # num of function [[1]] write() to %rax
     # 1arg adr_strin [["Hello METANIT\n"]] in %rsi 
     # 2arg num descr_out_write [[$1 to STDOUT ((0-STDIN; 2-STDERR))]] %rdi 
@@ -19,7 +19,7 @@ _start:
 
     movq $message1, %rsi
     movq $1, %rdi
-    movq $18, %rdx
+    movq $16, %rdx
     # num of function [[1]] write() to %rax
     # 1arg adr_strin [["Hello METANIT\n"]] in %rsi 
     # 2arg num descr_out_write [[$1 to STDOUT ((0-STDIN; 2-STDERR))]] %rdi 
