@@ -1,5 +1,5 @@
-hello.o: 2_file.c 
-	gcc -c 2_file.c -o hello.o 
+hello.o: file_prn.c 
+	gcc -c file_prn.c -o hello.o 
 
 utils.o: utils.c
 	gcc -c utils.c -o utils.o

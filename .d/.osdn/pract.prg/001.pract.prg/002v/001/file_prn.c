@@ -1,5 +1,5 @@
 #include <stdio.h>
-// #include <fn.h>
+// That flow: 2 file compile without .h files
 
 // {{hint}}
 
@@ -9,7 +9,7 @@ printf %[?] ::
 
 */
 
-// see ~/edu_dta/fl.d/0001.fl.d/lecture01.pdf
+// page book:: XXX
 
 void print_utils();
 
