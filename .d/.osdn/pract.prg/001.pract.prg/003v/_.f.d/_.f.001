@@ -1,0 +1,8 @@
+    eval "cd \${dr_pth_fn_${rnd}} || return 1"
+
+    make clear
+    echo
+    make hello.cxe
+    echo
+    echo "exec :: ./hello.cxe"
+    ./hello.cxe

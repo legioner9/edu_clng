@@ -1,8 +1,8 @@
 CC = gcc
 CC_FLAGS = -w -Werror -Wall
 
-hello.o: prn_fn.c 
-	gcc -c $(CC_FLAGS) prn_fn.c -o hello.o 
+hello.o: main.c 
+	gcc -I include/ -c $(CC_FLAGS) main.c -o hello.o 
 
 utils.o: utils.c
 	gcc -c $(CC_FLAGS) utils.c -o utils.o
