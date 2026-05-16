@@ -7,6 +7,10 @@ fn_27735_21459(){
     local fl_nm_fn_27735_21459=$(basename ${HOME}/edu_clng/.d/.osdn/pract.prg/002.pract.prg/gig_make_dr.sh)
     local rnd=27735_21459
 
+        [[ -z "$1" ]] && {
+            
+        }
+
         [[ "$1" == "-h" ]] && {
         echo -e "
         this -h for fl ::
