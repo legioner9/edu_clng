@@ -8,7 +8,8 @@ fn_27735_21459(){
     local rnd=27735_21459
 
         [[ -z "$1" ]] && {
-            
+            echo -e "${ECHO_RET1}in file://$fn_nm , line=${LINENO} :: ARG_1_NOT_DEFINE is name gig dir, return 1${NRM}" >&2
+            return 1
         }
 
         [[ "$1" == "-h" ]] && {
