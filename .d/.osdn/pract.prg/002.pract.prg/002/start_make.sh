@@ -32,7 +32,7 @@ fn_31496_26689(){
     # {{body}}
     eval "cd \${dr_pth_fn_${rnd}} || return 1"
 
-    # make clear
+    make clear
 
     make
     ./hello.cxe

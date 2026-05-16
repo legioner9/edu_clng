@@ -1,5 +1,6 @@
 hello: fn.c
-	gcc fn.c -o hello.cxe
+	gcc -c fn.c -o hello.o
+	gcc hello.o -o hello.cxe
 
 clear:
-	rm -f *.cxe
+	rm -fv *.cxe *.o
