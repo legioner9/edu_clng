@@ -23,7 +23,7 @@ fn_14804_16582(){
     # {{body}}
     eval "cd \${dr_pth_fn_${rnd}} || return 1"
 
-    make hello
+    make hello.cxe
     
     ./hello.cxe
     return 0

@@ -1,4 +1,5 @@
 #include <stdio.h>
+// #include <fn.h>
 
 // {{hint}}
 
@@ -10,7 +11,10 @@ printf %[?] ::
 
 // see ~/edu_dta/fl.d/0001.fl.d/lecture01.pdf
 
+void print_utils();
+
 int main(){
-    printf("Hello World!\n");
+    printf("%s","Make Word that)))\n");
+    print_utils();
     return 0;
 }
