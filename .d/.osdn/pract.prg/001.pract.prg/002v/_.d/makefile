@@ -4,7 +4,7 @@ hello.o: main.c
 utils.o: utils.c
 	gcc -c utils.c -o utils.o
 
-clean:
+clear:
 	rm -f hello.cxe
 
 hello.cxe: hello.o utils.o

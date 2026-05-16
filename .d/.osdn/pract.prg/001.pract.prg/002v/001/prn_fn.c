@@ -1,6 +1,6 @@
 #include <stdio.h>
 // That flow: 2 file compile without .h files
-
+// https://labex.io/ru/tutorials/c-manage-projects-with-make-in-c-438333
 // {{hint}}
 
 /*
@@ -11,7 +11,7 @@ printf %[?] ::
 
 // page book:: XXX
 
-void print_utils();
+// void print_utils();
 
 int main(){
     printf("%s","Make Word that)))\n");
