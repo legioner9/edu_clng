@@ -38,7 +38,14 @@ fn_14015_19712(){
     # {{body}}
     eval "cd \${dr_pth_fn_${rnd}} || return 1"
 
+    # CC=gcc
+    # CFLAGS=-g
+    make clean
     make
+    ./fn
+    echo $?
+    CC=
+    CFLAGS=
     return 0
 
 }

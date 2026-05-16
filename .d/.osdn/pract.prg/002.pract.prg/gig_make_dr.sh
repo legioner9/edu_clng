@@ -37,8 +37,9 @@ fn_27735_21459(){
     # local fl_1_fn_27735_21459=${dr_pth_fn_27735_21459}/${arg_1_fn_27735_21459}
 
     cp -r ${dr_pth_fn_27735_21459}/_000 ${dr_1_fn_27735_21459} || return 1
-    lfoe_gig_sh ${dr_1_fn_27735_21459} start_make.sh
-    l_02_fs2f ${dr_pth_fn_27735_21459}/gig_make_dr.dta/start_make.sh.body {{body}} ${dr_1_fn_27735_21459}/start_make.sh
+    lfoe_gig_sh ${dr_1_fn_27735_21459} start_make.sh || return 1
+    l_02_fs2f ${dr_pth_fn_27735_21459}/gig_make_dr.dta/start_make.sh.body "{{body}}" ${dr_1_fn_27735_21459}/start_make.sh
+    l_02_fs2f "[[body]]" "{{body}}" ${dr_1_fn_27735_21459}/start_make.sh
 
     cd ${dr_1_fn_27735_21459}
 
