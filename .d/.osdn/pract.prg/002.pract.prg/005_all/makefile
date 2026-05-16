@@ -1,6 +1,6 @@
 hello: one two three
 
-one:
+one :
 	echo "one"
 two:
 	echo "two"
