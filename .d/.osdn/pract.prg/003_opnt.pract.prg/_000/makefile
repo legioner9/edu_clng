@@ -20,8 +20,7 @@
 # src = *.c; obj = $(src:.c=.o)
 
 # wildcard 	:: for correct empty pattern $(wildcard *.w)
-# patsubst	:: obj_fl := $(patsubst %.c,%.o,$(wildcard *.c))
-# filter	:: $(filter %.o, $(fl.o fl.x))
+# filter	:: $(filter %.o, $(fl.a fl.c))
 
 # make ::
 #	-n - only see work - not exec cmnd 

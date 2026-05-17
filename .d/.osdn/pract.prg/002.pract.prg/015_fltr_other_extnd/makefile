@@ -23,9 +23,8 @@
 
 CC = gcc -I include/
 
-
-obj_fl = all.o a.o b.o
-src_fl = all.c a.c b.c
+# src_fl := $(wildcard *.c)
+obj_fl := $(patsubst %.c,%.o,$(wildcard *.c))
 
 .PHONY: hello
 
