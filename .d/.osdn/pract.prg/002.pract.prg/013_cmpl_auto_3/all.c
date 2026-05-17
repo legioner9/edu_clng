@@ -2,5 +2,5 @@
 int main(){
     a();
     b();
-    return 32;
+    return 30;
 }

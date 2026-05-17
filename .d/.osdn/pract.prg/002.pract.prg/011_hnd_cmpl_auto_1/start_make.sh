@@ -37,8 +37,10 @@ fn_735_7063(){
     # local fl_1_fn_735_7063=${dr_pth_fn_735_7063}/${arg_1_fn_735_7063}
     # {{body}}
     eval "cd \${dr_pth_fn_${rnd}} || return 1"
-
+    make clear
     make
+    ./hello.cxe
+    echo $?
     return 0
 
 }
