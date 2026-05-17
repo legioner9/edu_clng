@@ -21,10 +21,11 @@
 # .PHONY: - define only trg
 
 
-CC = gcc 
+CC = gcc -I include/
 
-obj_fl = all.result a.o b.o
-src_fl = all.raw a.c b.c
+
+obj_fl = all.o a.o b.o
+src_fl = all.c a.c b.c
 
 .PHONY: hello
 
@@ -34,8 +35,8 @@ hello:	$(obj_fl)
 $(filter %.o,$(obj_fl)): %.o: %.c
 	$(CC) -c $^ -o $@
 		
-$(filter %.result,$(obj_fl)): %.result: %.raw
-	$(CC) -c $^ -o $@
+# $(filter %.result,$(obj_fl)): %.result: %.raw
+# 	$(CC) -c $^ -o $@
 
 clean:
-	rm -f $(obj_fl)
+	rm -f $(obj_fl) hello.cxe

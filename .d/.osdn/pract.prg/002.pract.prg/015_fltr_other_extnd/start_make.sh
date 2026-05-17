@@ -1,6 +1,6 @@
 #!/bin/bash
 
-fn_18062_12543(){
+fn_18062_12543() {
 
     local fl_pth_fn_18062_12543="${HOME}/edu_clng/.d/.osdn/pract.prg/002.pract.prg/015_fltr_other_extnd/start_make.sh"
     local dr_pth_fn_18062_12543=$(dirname ${HOME}/edu_clng/.d/.osdn/pract.prg/002.pract.prg/015_fltr_other_extnd/start_make.sh)
@@ -26,9 +26,9 @@ fn_18062_12543(){
     local arg_1_fn_18062_12543="$1"
     local arg_2_fn_18062_12543="$2"
     local arg_3_fn_18062_12543="$3"
- 
+
     # l_02_fs2f ins.f {{pre_str_in_rcv.f}} rcv.f
-    # l_02_s2f :: reciver_string: $1 inserter_string: $2 [@ - empty string] in reciver_result_file: $3 
+    # l_02_s2f :: reciver_string: $1 inserter_string: $2 [@ - empty string] in reciver_result_file: $3
     # lfoe_path_to_var ::  insert \${HOME} into string '${HOME}'
     # lfoe_gig_sh :: create $2 file in $1 dir from ${HOME}/aer_foe/.d/.sh/.lib.sh/.dta/.tml/sh1.tml
 
@@ -38,10 +38,11 @@ fn_18062_12543(){
     # [[body]]
     eval "cd \${dr_pth_fn_${rnd}} || return 1"
 
+    make clean
     make
 
-    # ./hello.cxe
-    # echo $?
+    ./hello.cxe
+    echo $?
     return 0
 
 }
