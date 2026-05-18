@@ -36,7 +36,7 @@ fn_21444_53452(){
     local dr_1_fn_21444_53452=${dr_pth_fn_21444_53452}/${arg_1_fn_21444_53452}
     # local fl_1_fn_21444_53452=${dr_pth_fn_21444_53452}/${arg_1_fn_21444_53452}
 
-    cp -r ${dr_pth_fn_21444_53452}/_000 ${dr_1_fn_21444_53452} || return 1
+    cp -r ${dr_pth_fn_21444_53452}/.d ${dr_1_fn_21444_53452} || return 1
     lfoe_gig_sh ${dr_1_fn_21444_53452} start_make.sh || return 1
     l_02_fs2f ${dr_pth_fn_21444_53452}/gig_make_dr.dta/start_make.sh.body "{{body}}" ${dr_1_fn_21444_53452}/start_make.sh
     l_02_s2f "{{body}}" "[[body]]" "${dr_1_fn_21444_53452}"/start_make.sh

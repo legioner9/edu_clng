@@ -1,6 +1,7 @@
     eval "cd \${dr_pth_fn_${rnd}} || return 1"
-    # make clean
+    
+    make clean
     make
 
-    # ./hello.cxe
-    # echo $?
+    ./hello.cxe
+    echo $?
