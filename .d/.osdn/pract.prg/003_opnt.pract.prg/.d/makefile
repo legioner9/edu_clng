@@ -1,25 +1,4 @@
-# Trg: Dpn(Trg or Fls)
-# 	Cmnd	
-# var := value
-# $@ 								:: $@ - target
-# $^								:: $^ - depend
-# %									:: %  - common part
-# $(arr[a.o, b.o], ...): %.c: %o	:: arr - iterator [a.o: a.c, b.o: b.c, ...]
-# example_1 : instead
-# a.o: a.c
-# 	$(CC) -c $^ -o $@
-# b.o: b.c
-# 	$(CC) -c $^ -o $@ 
-# all.o: all.c
-# 	$(CC) -c $^ -o $@
-# that code:
-# $(obj): %.o: %.c
-# 	$(CC) -c $^ -o $@
-
-# wildcard 	:: for empty pattern $(wildcard *.w)
-
-# .PHONY: - define only trg
-
+# {{body}}
 
 CC = gcc -I include/
 
