@@ -1,18 +1,18 @@
 #!/bin/bash
 
-fn_21444_53452(){
+fn_21444_53452() {
 
     local fl_pth_fn_21444_53452="${HOME}/edu_clng/.d/.osdn/pract.prg/003_opnt.pract.prg/gig_make_dr.sh"
     local dr_pth_fn_21444_53452=$(dirname ${HOME}/edu_clng/.d/.osdn/pract.prg/003_opnt.pract.prg/gig_make_dr.sh)
     local fl_nm_fn_21444_53452=$(basename ${HOME}/edu_clng/.d/.osdn/pract.prg/003_opnt.pract.prg/gig_make_dr.sh)
     local rnd=21444_53452
 
-        [[ -z "$1" ]] && {
-            echo -e "${ECHO_RET1}in file://$fn_nm , line=${LINENO} :: ARG_1_NOT_DEFINE is name gig dir, return 1${NRM}" >&2
-            return 1
-        }
+    [[ -z "$1" ]] && {
+        echo -e "${ECHO_RET1}in file://$fn_nm , line=${LINENO} :: ARG_1_NOT_DEFINE is name gig dir, return 1${NRM}" >&2
+        return 1
+    }
 
-        [[ "$1" == "-h" ]] && {
+    [[ "$1" == "-h" ]] && {
         echo -e "
         this -h for fl ::
         doing :: 
@@ -25,9 +25,9 @@ fn_21444_53452(){
     local arg_1_fn_21444_53452="$1"
     local arg_2_fn_21444_53452="$2"
     local arg_3_fn_21444_53452="$3"
- 
+
     # l_02_fs2f ins.f {{pre_str_in_rcv.f}} rcv.f
-    # l_02_s2f :: reciver_string: $1 inserter_string: $2 [@ - empty string] in reciver_result_file: $3 
+    # l_02_s2f :: reciver_string: $1 inserter_string: $2 [@ - empty string] in reciver_result_file: $3
     # lfoe_path_to_var ::  insert \${HOME} into string '${HOME}'
     # lfoe_gig_sh :: create $2 file in $1 dir from ${HOME}/aer_foe/.d/.sh/.lib.sh/.dta/.tml/sh1.tml
     # {{body}}
@@ -45,7 +45,7 @@ fn_21444_53452(){
     l_02_fs2f ${HOME}/edu_clng/.d/.osdn/.hnt/makefile.body.hnt "{{body}}" ${dr_1_fn_21444_53452}/makefile
     l_02_s2f "{{body}}" "[[body]]" ${dr_1_fn_21444_53452}/makefile
 
-        l_02_fs2f ${HOME}/edu_clng/.d/.osdn/.hnt/clang.body.hnt "{{body}}" ${dr_1_fn_21444_53452}/all.c
+    l_02_fs2f ${HOME}/edu_clng/.d/.osdn/.hnt/clang.body.hnt "{{body}}" ${dr_1_fn_21444_53452}/all.c
     l_02_s2f "{{body}}" "[[body]]" ${dr_1_fn_21444_53452}/all.c
 
     cd ${dr_1_fn_21444_53452}
