@@ -7,10 +7,10 @@ fn_21444_53452() {
     local fl_nm_fn_21444_53452=$(basename ${HOME}/edu_clng/.d/.osdn/pract.prg/003_opnt.pract.prg/gig_make_dr.sh)
     local rnd=21444_53452
 
-    [[ -z "$1" ]] && {
-        echo -e "${ECHO_RET1}in file://$fn_nm , line=${LINENO} :: ARG_1_NOT_DEFINE is name gig dir, return 1${NRM}" >&2
-        return 1
-    }
+    # [[ -z "$1" ]] && {
+    #     echo -e "${ECHO_RET1}in file://$fn_nm , line=${LINENO} :: ARG_1_NOT_DEFINE is name gig dir, return 1${NRM}" >&2
+    #     return 1
+    # }
 
     [[ "$1" == "-h" ]] && {
         echo -e "
@@ -31,6 +31,11 @@ fn_21444_53452() {
     # lfoe_path_to_var ::  insert \${HOME} into string '${HOME}'
     # lfoe_gig_sh :: create $2 file in $1 dir from ${HOME}/aer_foe/.d/.sh/.lib.sh/.dta/.tml/sh1.tml
     # {{body}}
+
+    [[ -z "$1" ]] && {
+        echo -e "${ECHO_RET1}in file://$fn_nm , line=${LINENO} :: ARG_1_NOT_DEFINE is name gig dir, return 1${NRM}" >&2
+        return 1
+    }
 
     cd ${dr_pth_fn_21444_53452} || return 1
     local dr_1_fn_21444_53452=${dr_pth_fn_21444_53452}/${arg_1_fn_21444_53452}

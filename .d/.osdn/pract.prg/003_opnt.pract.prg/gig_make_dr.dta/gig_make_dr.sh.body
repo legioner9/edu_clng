@@ -1,0 +1,19 @@
+    cd ${dr_pth_fn_{fn_nm}} || return 1
+    local dr_1_fn_{fn_nm}=${dr_pth_fn_{fn_nm}}/${arg_1_fn_{fn_nm}}
+    # local fl_1_fn_{fn_nm}=${dr_pth_fn_{fn_nm}}/${arg_1_fn_{fn_nm}}
+
+    cp -r ${dr_pth_fn_{fn_nm}}/.d ${dr_1_fn_{fn_nm}} || return 1
+    lfoe_gig_sh ${dr_1_fn_{fn_nm}} start_make.sh || return 1
+
+    l_02_fs2f ${dr_pth_fn_{fn_nm}}/gig_make_dr.dta/start_make.sh.body "{{body}}" ${dr_1_fn_{fn_nm}}/start_make.sh
+    l_02_s2f "{{body}}" "[[body]]" ${dr_1_fn_{fn_nm}}/start_make.sh
+
+    l_02_fs2f ${HOME}/edu_clng/.d/.osdn/.hnt/makefile.body.hnt "{{body}}" ${dr_1_fn_{fn_nm}}/makefile
+    l_02_s2f "{{body}}" "[[body]]" ${dr_1_fn_{fn_nm}}/makefile
+
+    l_02_fs2f ${HOME}/edu_clng/.d/.osdn/.hnt/clang.body.hnt "{{body}}" ${dr_1_fn_{fn_nm}}/all.c
+    l_02_s2f "{{body}}" "[[body]]" ${dr_1_fn_{fn_nm}}/all.c
+
+    cd ${dr_1_fn_{fn_nm}}
+
+    . start_make.sh
