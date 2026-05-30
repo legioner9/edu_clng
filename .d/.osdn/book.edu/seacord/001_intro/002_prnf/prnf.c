@@ -12,6 +12,9 @@ printf %[?] ::
 // page book:: XXX
 
 int main(){
-    printf("Hello World!\n");
-    return 0;
+    if (printf("Hello World!\n")<0){
+        perror("printf()"); // POSIX requires that errno is set
+
+    };
+    return EXIT_SUCCESS;
 }
