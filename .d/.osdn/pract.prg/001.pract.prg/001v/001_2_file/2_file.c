@@ -5,7 +5,7 @@
 
 /*
 types :: viod int long float double (long long) (long double)
-printf %[?] :: 
+printf %[?] ::
 
 */
 
@@ -13,8 +13,8 @@ printf %[?] ::
 
 void print_utils();
 
-int main(){
-    printf("%s","Make Word that)))\n");
-    print_utils();
-    return 0;
+int main() {
+  printf("%s", "Make Word that)))\n");
+  print_utils();
+  return 0;
 }
