@@ -48,6 +48,7 @@ fn_12162_22473(){
     # make hello_gdb
     
     ./hello.cxe
+	echo $?
     return 0
 
 }
