@@ -5,14 +5,13 @@
 
 /*
 types :: viod int long float double (long long) (long double)
-printf %[?] :: 
+printf %[?] ::
 
 */
 
 // page book:: XXX
 
-int main(void)
-{
+int main(void) {
     FILE *f = fopen("non_existent", "r");
     if (f == NULL) {
         perror("fopen() failed");
