@@ -59,14 +59,14 @@ fn_vethhg5231vdsf4gfvs() {
 		echo "gs is NULL"
 	fi
 
-	local adcae_12344
-	adcae_12344=edu_lnx
-	check_repo_adcae_12344
-	adcae_12344=edu_clng
-	check_repo_adcae_12344
-	adcae_12344=edu_dta
-	check_repo_adcae_12344
-	adcae_12344=
+	# local adcae_12344
+	# adcae_12344=edu_lnx
+	# check_repo_adcae_12344
+	# adcae_12344=edu_clng
+	# check_repo_adcae_12344
+	# adcae_12344=edu_dta
+	# check_repo_adcae_12344
+	# adcae_12344=
 
 	cd ${DDir}
 
