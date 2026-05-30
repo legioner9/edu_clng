@@ -14,7 +14,7 @@ printf %[?] ::
 // void print_utils();
 
 int main() {
-  printf("%s", "Make Word that)))\n");
-  print_utils();
-  return 0;
+    printf("%s", "Make Word that)))\n");
+    print_utils();
+    return 0;
 }
