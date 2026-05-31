@@ -1,0 +1,7 @@
+    eval "cd \${dr_pth_fn_${rnd}}/_.d || return 1"
+
+    make hello
+    # make hello_gdb
+    
+    ./hello.cxe
+    # echo $?
