@@ -1,0 +1,11 @@
+hello: set_type_int.c 
+	gcc -o hello.cxe set_type_int.c 
+
+hello_g: set_type_int.c 
+	gcc -g -o hello_g.cxe set_type_int.c 
+
+hello_gdb: hello_g.cxe
+	gdb -tui hello_g.cxe
+
+clean:
+	rm -v *.cxe
