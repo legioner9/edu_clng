@@ -1,19 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// {{hint}}
-
-/*
-types :: viod int long float double (long long) (long double)
-printf %[?] ::
-
-*/
-
-// page book:: XXX
-
-int main(void) {
-    FILE *f = fopen("non_existent", "r");
+int main() {
+    FILE *f = fopen("not_file", "r");
     if (f == NULL) {
+        // perror("");
         perror("fopen() failed");
     } else {
         fclose(f);

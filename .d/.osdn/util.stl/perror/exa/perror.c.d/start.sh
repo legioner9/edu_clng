@@ -52,7 +52,7 @@ fn_17119_15320(){
     # make hello_gdb
     
     ./hello.cxe
-    # echo $?
+    echo $?
     return 0
 
 }
