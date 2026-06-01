@@ -10,26 +10,19 @@ printf %[?] ::
 
 */
 
-// page book:: 51
-// TODO enum see : https://metanit.com/c/tutorial/6.8.php
+// https://metanit.com/c/tutorial/6.8.php
+
+struct BinOp {
+    int operand1;
+    int operand2;
+    enum { ADD, SUB, MUL } operation;
+};
 
 int main(void) {
-    enum day { sun, mon, tue, wen, thu, fri, sat };
-    enum cardinal_points { north = 0, east = 90, south = 180, west = 270 };
-    enum months {
-        jan = 1,
-        feb,
-        mar,
-        apr,
-        may,
-        jun,
-        jul,
-        aug,
-        sep,
-        oct,
-        nov,
-        dec
-    };
 
+    struct BinOp calc1 = {.operand1 = 5, .operand2 = 7, .operation = MUL};
+
+    printf("Operands: %d, %d , Operation: %d\n", calc1.operand1, calc1.operand2,
+           calc1.operation);
     return 0;
 }
