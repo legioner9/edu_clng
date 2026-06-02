@@ -21,9 +21,10 @@ int main(void) {
         printf("i = %d\n", i);
 
         str[i] = '0' + i;
-        // str[i] = i;
+        printf("str[%d] = %d\n", i, str[i]);
+        printf("&str[%d] = %p\n", i, &str[i]);
         printf("str[11] = %s\n", str);
     }
- 
+
     str[10] = '\0';
 }
