@@ -23,6 +23,7 @@ int main(void) {
         str[i] = '0' + i;
         printf("str[%d] = %d\n", i, str[i]);
         printf("&str[%d] = %p\n", i, &str[i]);
+        printf("&str[%d] - &str[%d - 1] = %ld\n", i, i, &str[i] - &str[i - 1]);
         printf("str[11] = %s\n", str);
     }
 
