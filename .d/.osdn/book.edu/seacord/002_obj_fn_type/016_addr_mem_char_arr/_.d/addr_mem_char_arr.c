@@ -1,18 +1,25 @@
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
 
 // {{hint}}
 
 /*
 types :: viod int long float double (long long) (long double)
-printf %[?] :: 
+printf %[?] ::
 
 */
+// TODO return and undestand :: that bred
+// page book:: 56
+void fn(int arr[5]);
+int main(void) {
 
-// page book:: XXX
+    unsigned int i = 0;
+    unsigned int j = 0;
 
-int main(void){
-    printf("Hello World!\n");
+    int arr[3][5];
+    fn(arr[i]);
+    int x = arr[i][j];
+
     return 0;
 }
