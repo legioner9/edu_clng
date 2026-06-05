@@ -10,7 +10,7 @@ printf %[?] ::
 
 */
 
-// page book:: XXX
+// page book:: 61
 
 int main(void) {
     const int n = 3;

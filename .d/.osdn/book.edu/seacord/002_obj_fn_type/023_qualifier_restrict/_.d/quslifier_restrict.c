@@ -10,7 +10,7 @@ printf %[?] ::
 
 */
 // TODO *p++ = *q++ ?
-// page book:: XXX
+// page book:: 63
 
 void f(unsigned int n, int *restrict p, int *restrict q) {
     while (n-- > 0) {
