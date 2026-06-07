@@ -11,7 +11,7 @@ printf %[?] ::
 
 */
 
-// page book:: XXX
+// page book:: 69
 
 int main(void) {
 
@@ -30,3 +30,7 @@ int main(void) {
     printf("ui = %u\n", ui);
     return 0;
 }
+
+// ui = 4294967295
+// ui = 0
+// ui = 4294967295
