@@ -2,9 +2,9 @@
 
 fn_18062_12543() {
 
-    local fl_pth_fn_18062_12543="${HOME}/edu_clng/.d/.osdn/pract.prg/002.pract.prg/016_my_far_fl_lib_in_include/start_make.sh"
-    local dr_pth_fn_18062_12543=$(dirname ${HOME}/edu_clng/.d/.osdn/pract.prg/002.pract.prg/016_my_far_fl_lib_in_include/start_make.sh)
-    local fl_nm_fn_18062_12543=$(basename ${HOME}/edu_clng/.d/.osdn/pract.prg/002.pract.prg/016_my_far_fl_lib_in_include/start_make.sh)
+    local fl_pth_fn_18062_12543="${HOME}/edu_clng/.d/.osdn/pract.prg/002.pract.prg/016.ax/start_make.sh"
+    local dr_pth_fn_18062_12543=$(dirname ${HOME}/edu_clng/.d/.osdn/pract.prg/002.pract.prg/016.ax/start_make.sh)
+    local fl_nm_fn_18062_12543=$(basename ${HOME}/edu_clng/.d/.osdn/pract.prg/002.pract.prg/016.ax/start_make.sh)
     local rnd=18062_12543
 
     # [[ -z "$1" ]] && {

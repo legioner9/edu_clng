@@ -20,8 +20,8 @@
 
 # .PHONY: - define only trg
 
-PTH_L1 = ${HOME}/edu_clng/.d/.osdn/pract.prg/002.pract.prg/016_my_far_fl_lib_in_include/include
-PTH_M1 = ${HOME}/edu_clng/.d/.osdn/pract.prg/002.pract.prg/016_my_far_fl_lib_in_include
+PTH_L1 = ${HOME}/edu_clng/.d/.osdn/pract.prg/002.pract.prg/016.ax/include
+PTH_M1 = ${HOME}/edu_clng/.d/.osdn/pract.prg/002.pract.prg/016.ax
 # CC = gcc -I include
 CC = gcc -I  $(PTH_L1)
 

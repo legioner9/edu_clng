@@ -20,28 +20,24 @@
 
 # .PHONY: - define only trg
 
-PTH_L1 = ${HOME}/edu_clng/.d/.osdn/pract.prg/002.pract.prg/016_my_far_fl_lib_in_include/include
-PTH_M1 = ${HOME}/edu_clng/.d/.osdn/pract.prg/002.pract.prg/016_my_far_fl_lib_in_include
-# CC = gcc -I include
-CC = gcc -I  $(PTH_L1)
+
+CC = gcc -I include/
 
 # src_fl := $(wildcard *.c)
-obj_fl_incl := $(patsubst %.c,%.o,$(wildcard $(PTH_L1)/*.c))
-obj_fl_main := $(patsubst %.c,%.o,$(wildcard $(PTH_M1)/*.c))
+obj_fl_incl := $(patsubst %.c,%.o,$(wildcard include/*.c))
 
 .PHONY: hello
 
-hello: $(obj_fl_main) $(obj_fl_incl)
+hello: all.c $(obj_fl_incl)
 	$(CC) $^ -o hello.cxe
 
 $(filter %.o,$(obj_fl_incl)): %.o: %.c
 	$(CC) -c $^ -o $@
 
-$(filter %.o,$(obj_fl_main)): %.o: %.c
-	$(CC) -c $^ -o $@
+# all: 
 		
 # $(filter %.result,$(obj_fl)): %.result: %.raw
 # 	$(CC) -c $^ -o $@
 
 clean:
-	rm -f $(obj_fl_incl) all.o hello.cxe
+	rm -fv $(obj_fl_incl) hello.cxe
