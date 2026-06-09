@@ -14,10 +14,12 @@ printf %[?] ::
 // page book:: XXX
 
 int main(void){
-    printf("float_dig hexadecimal %%a = 1.01e+2f :: %a\n", 1.01e+2f);
-    printf("float_dig hexadecimal %%A = 101.f :: %a\n", 101.f);
-    printf("char c=90 :: %%c='%c'\n", 90);
-    printf("Hello World!\n");
+    signed int n = 1000;
+    unsigned int n1 = 1000u;
+    long int n2 = 1000l;
+    unsigned long int n3= 1000ul;
+    long long int n4 = 1000ll;
+    unsigned long long int n5 = 1000ull;
     return 0;
 }
 

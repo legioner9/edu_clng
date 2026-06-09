@@ -14,9 +14,9 @@ printf %[?] ::
 // page book:: XXX
 
 int main(void){
-    printf("float_dig hexadecimal %%a = 1.01e+2f :: %a\n", 1.01e+2f);
-    printf("float_dig hexadecimal %%A = 101.f :: %a\n", 101.f);
-    printf("char c=90 :: %%c='%c'\n", 90);
+    printf("00101111 => (0010)2(1111)f => 0x2f = %%d :: %d\n", 0x2f);
+    printf("00101111 => 00(101)5(111)7 => 057 = %%d :: %d\n", 057);
+
     printf("Hello World!\n");
     return 0;
 }
