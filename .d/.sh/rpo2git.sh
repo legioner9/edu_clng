@@ -72,4 +72,4 @@ fn_vethhg5231vdsf4gfvs() {
 
 }
 
-fn_vethhg5231vdsf4gfvs @
+fn_vethhg5231vdsf4gfvs $@
