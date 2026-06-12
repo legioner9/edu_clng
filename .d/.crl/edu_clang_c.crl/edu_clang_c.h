@@ -1,0 +1,1 @@
+void a_edu_clang_c(void);
