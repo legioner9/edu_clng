@@ -1,0 +1,12 @@
+	eval "local nn_dr=\${dr_pth_fn_${rnd}}/../../"
+
+	cd ${nn_dr} || return 1
+
+	. ${nn_dr}/start.sh
+
+	cd ${nn_dr}/_.d
+
+	l_00_echo_code ./hello.cxe
+	./hello.cxe
+
+	. ${nn_dr}/_.d/.tst/flow1.tst.d/flow1.tst
