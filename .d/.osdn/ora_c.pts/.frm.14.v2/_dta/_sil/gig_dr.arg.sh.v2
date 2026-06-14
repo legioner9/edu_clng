@@ -1,0 +1,16 @@
+# ptrn::
+#. PTH1/gig_dr.sh \
+#	PTH2/NM_FL_BIN.fn/NNN \ #.. be created
+#	NM_FL_C.c #.. mast ext=.c
+
+ora_dr=${HOME}/edu_clng/.d/.osdn/ora_c.pts
+frm_14=${ora_dr}/.frm.14.v2
+gig_dr_sh=${frm_14}/gig_dr.sh
+
+main_theme=001_args
+sub_theme=003_arg_is_int_v2
+
+. ${gig_dr_sh} \
+	${ora_dr}/${main_theme}/${sub_theme} \
+	${sub_theme}.c
+

@@ -1,33 +1,10 @@
 # {{hint}}
-# Trg: Dpn(Trg or Fls)
-# 	Cmnd	
-# var := value
-# $@ 								:: $@ - target
-# $^								:: $^ - depend
-# %									:: %  - common part
-# $(arr[a.o, b.o], ...): %.c: %o	:: arr - iterator [a.o: a.c, b.o: b.c, ...]
-# example_1 : instead
-# a.o: a.c
-# 	$(CC) -c $^ -o $@
-# b.o: b.c
-# 	$(CC) -c $^ -o $@ 
-# all.o: all.c
-# 	$(CC) -c $^ -o $@
-
-# that code:
-# $(obj): %.o: %.c
-# 	$(CC) -c $^ -o $@
-
-# wildcard 	:: if empty pattern $(wildcard *.w)
-# patsubst  :: obj_fl := $(patsubst %.c,%.o,$(wildcard *.c))
-
-# .PHONY: - define only trg
 
 # includ_dr lib
-PTH_L1 = ${HOME}/edu_clng/.d/.osdn/ora_c.pts/001_args/002_arg_is_int/_.d/include
+PTH_L1 = {{result_dr_d}}/include
 
 # all files in root dir
-PTH_M1 = ${HOME}/edu_clng/.d/.osdn/ora_c.pts/001_args/002_arg_is_int/_.d
+PTH_M1 = {{result_dr_d}}
 
 PTH_AER_FOE_C_CRL = ${HOME}/aer_foe/.d/.crl/aer_foe_c.crl.d/aer_foe_c.crl
 PTH_EDU_CLANG_C_CRL = ${HOME}/edu_clng/.d/.crl/edu_clang_c.crl.d/edu_clang_c.crl
