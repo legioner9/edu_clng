@@ -107,9 +107,6 @@ fn_13390_7193() {
 
 	fi
 
-	#!
-	read -p "2"
-
 	lfoe_gig_sh ${result_dr} start.sh
 
 	# l_02_fs2f ins.f {{body}} rcv.f
@@ -155,9 +152,6 @@ fn_13390_7193() {
 	l_02_fs2f "${dr_f_d}"/flow1.tst.ins {{body}} ${flow1_tst}
 
 	#! end
-
-	#!
-	read -p "1"
 
 	cd ${result_dr} || return 1
 	. start.sh
