@@ -1,0 +1,20 @@
+// {{hint}}
+
+/*
+types :: viod int long float double (long long) (long double)
+printf %[?] ::
+
+*/
+#include "a_b.h"
+#include "aer_foe_c.h"
+#include "edu_clang_c.h"
+#include <stdio.h>
+
+int main(int argc, char **argv) {
+
+    char *arg0 = argv [0];
+    char *arg1 = argv [1];
+    printf("arg0=%s, arg1=%s", arg0, arg1);
+
+    return 43;
+}

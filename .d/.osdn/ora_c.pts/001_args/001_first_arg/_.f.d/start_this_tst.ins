@@ -1,0 +1,11 @@
+	eval "local nn_dr=\${dr_pth_fn_${rnd}}/../../"
+
+	cd ${nn_dr} || return 1
+
+	# . ${nn_dr}/start.sh
+
+	if . ${nn_dr}/_.d/.tst/flow1.tst.d/flow1.tst; then
+		return 0
+	else
+		return 1
+	fi
