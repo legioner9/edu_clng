@@ -12,7 +12,7 @@ gig_dr_sh=${frm_14}/gig_dr.sh
 
 
 main_theme="001_args"
-sub_theme="001_first_arg"
+sub_theme="002_arg_is_int"
 
 . ${gig_dr_sh} \
 	${ora_dr}/${main_theme}/${sub_theme} \

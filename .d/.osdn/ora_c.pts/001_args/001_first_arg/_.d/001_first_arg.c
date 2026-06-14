@@ -12,9 +12,12 @@ printf %[?] ::
 
 int main(int argc, char **argv) {
 
-    char *arg0 = argv [0];
-    char *arg1 = argv [1];
-    printf("arg0=%s, arg1=%s", arg0, arg1);
-
+    char *arg0 = argv[0];
+    char *arg1 = argv[1];
+    printf("arg0=%s, arg1=%s\n", arg0, arg1);
+    // check link libs
+    a_aer_foe_c();
+    a_edu_clang_c();
     return 43;
+
 }

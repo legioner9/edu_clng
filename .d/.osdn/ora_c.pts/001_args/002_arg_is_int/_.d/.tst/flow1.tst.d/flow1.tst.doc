@@ -1,3 +1,4 @@
+exec:: '001_args 1'
 arg0=001_args, arg1=1
 a)-+
 from a_aer_foe_c

@@ -1,4 +1,10 @@
 // {{hint}}
+
+/*
+types :: viod int long float double (long long) (long double)
+printf %[?] :: 
+
+*/
 #include "a_b.h"
 #include "aer_foe_c.h"
 #include "edu_clang_c.h"
