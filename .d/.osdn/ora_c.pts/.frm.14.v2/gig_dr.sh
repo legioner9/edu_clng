@@ -147,7 +147,7 @@ fn_13390_7193() {
 	touch ${result_dr}/__.nm
 	echo -e "#
 &&&dr :: 
-@@@cnt :: 
+@@@cnt0 :: 
 	" >${result_dr}/readme.this.man
 
 	#! add tst flow

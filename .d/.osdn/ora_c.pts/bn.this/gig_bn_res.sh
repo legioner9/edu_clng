@@ -49,7 +49,7 @@ fn_20335_28361(){
 
 	cd ${dr_pth_fn_20335_28361} || return 1
 
-	. bn.sh > res.d/res.f
+	. bn.sh > res.d/res.md
 
     return 0
 

@@ -64,11 +64,14 @@ fn_28935_32401() {
 		local item2=
 		for item2 in $(find ${fn_dot_d} -type f -name *.c); do
 			echo
-			echo file://${item2}
-			echo "---------- start program list $(basename ${item2}) ------------"
+			echo "file://${item2}\n"
+			echo "---------- start program list $(basename ${item2}) ------------\n"
+			echo "\`\`\`c"
 			cat ${item2}
 			echo
-			echo "---------- end program list $(basename ${item2}) ------------"
+			echo "\`\`\`\n"
+			echo
+			echo "---------- end program list $(basename ${item2}) ------------\n"
 			echo
 			local doc_fl=${fn_dot_d}/.tst/flow1.tst.d/flow1.tst.doc
 			cat ${doc_fl}

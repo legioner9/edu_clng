@@ -1,0 +1,6 @@
+#
+&&&dr :: str to dig
+@@@cnt0 :: usu stlcr atoi
+
+@@@cnt :: atoi return succ:: string, fail:: 0
+	
