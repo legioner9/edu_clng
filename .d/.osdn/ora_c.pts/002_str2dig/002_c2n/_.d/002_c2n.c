@@ -6,9 +6,9 @@ void a2pi(char c, char *pchar);
 
 int main(int argc, char **argv) {
 
-    for (int i = 0; i < 128; ++i) {
-        printf("i=%i, c=%c\n", i, i);
-    }
+    // for (int i = 0; i < 128; ++i) {
+    //     printf("i=%i, c=%c\n", i, i);
+    // }
     int *pi;
     for (unsigned char i = 1; i < argc; ++i) {
         char *ptr_n;
@@ -22,5 +22,6 @@ int main(int argc, char **argv) {
 
 void a2pi(char c, char *pchar) {
     char x = -'0' + c;
+    printf("a2pi->'%i'\n", x);
     pchar = &x;
 }
