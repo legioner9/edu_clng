@@ -8,7 +8,7 @@ frm_14=${ora_dr}/.frm.14.v2
 gig_dr_sh=${frm_14}/gig_dr.sh
 
 main_theme=002_str2dig
-sub_theme=001_atoi
+sub_theme=002_c2n
 
 . ${gig_dr_sh} \
 	${ora_dr}/${main_theme}/${sub_theme} \
