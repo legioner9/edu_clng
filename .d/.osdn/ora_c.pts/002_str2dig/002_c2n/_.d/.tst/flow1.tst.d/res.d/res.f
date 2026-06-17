@@ -1,4 +1,3 @@
-a2pi->'1'
-arg[1]=1
- a2pi(&argv[1], 0x7faf7d5b7ab0)
- 0
+ptr_n=0x7f4a88868ab0, *ptr_n=0
+pchar=0x7f4a88868ab0, *pchar=5
+ptr_n=0x7f4a88868ab0, *ptr_n=5

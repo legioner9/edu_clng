@@ -1,31 +1,31 @@
 #!/bin/bash
 
-fn_26103_30564(){
+fn_26103_30564() {
 
-    local fl_pth_fn_26103_30564="${HOME}/edu_clng/.d/.osdn/ora_c.pts/002_str2dig/002_c2n/_.d/.tst/flow1.tst.d/flow1.tst"
-    local dr_pth_fn_26103_30564=$(dirname ${HOME}/edu_clng/.d/.osdn/ora_c.pts/002_str2dig/002_c2n/_.d/.tst/flow1.tst.d/flow1.tst)
-    local fl_nm_fn_26103_30564=$(basename ${HOME}/edu_clng/.d/.osdn/ora_c.pts/002_str2dig/002_c2n/_.d/.tst/flow1.tst.d/flow1.tst)
-    local rnd=26103_30564
+	local fl_pth_fn_26103_30564="${HOME}/edu_clng/.d/.osdn/ora_c.pts/002_str2dig/002_c2n/_.d/.tst/flow1.tst.d/flow1.tst"
+	local dr_pth_fn_26103_30564=$(dirname ${HOME}/edu_clng/.d/.osdn/ora_c.pts/002_str2dig/002_c2n/_.d/.tst/flow1.tst.d/flow1.tst)
+	local fl_nm_fn_26103_30564=$(basename ${HOME}/edu_clng/.d/.osdn/ora_c.pts/002_str2dig/002_c2n/_.d/.tst/flow1.tst.d/flow1.tst)
+	local rnd=26103_30564
 
-    # [[ -z "$1" ]] && {
-    #     # snp "out_err"
-    #     echo -e "${ECHO_RET1}in file://$fn_nm_fn_26103_30564 , line=${LINENO} :: ARG_1_NOT_DEFINE is ..., return 1${NRM}" >&2
-    #     return 1
-    # }
+	# [[ -z "$1" ]] && {
+	#     # snp "out_err"
+	#     echo -e "${ECHO_RET1}in file://$fn_nm_fn_26103_30564 , line=${LINENO} :: ARG_1_NOT_DEFINE is ..., return 1${NRM}" >&2
+	#     return 1
+	# }
 
-    [[ "$1" == "-h" ]] && {
-        echo -e "
+	[[ "$1" == "-h" ]] && {
+		echo -e "
         this -h for fl_pth_fn_26103_30564 ::
         doing :: 
             exa use ::
             far use ::
         "
-        return 0
-    }
+		return 0
+	}
 
-    local arg_1_fn_26103_30564="$1"
-    local arg_2_fn_26103_30564="$2"
-    local arg_3_fn_26103_30564="$3"
+	local arg_1_fn_26103_30564="$1"
+	local arg_2_fn_26103_30564="$2"
+	local arg_3_fn_26103_30564="$3"
 
 	# [[ -z "$2" ]] && {
 	# 	# snp "out_err"
@@ -36,17 +36,17 @@ fn_26103_30564(){
 	#! ptr_path
 	# local ptr_path_1="$arg_1_fn_26103_30564"
 	# ptr_path_1="$(l_01_abs_path "$(pwd)" "ptr_path_1")"
- 
-    # l_02_fs2f ins.f {{pre_str_in_rcv.f}} rcv.f
-    # l_02_s2f :: reciver_string: $1 inserter_string: $2 [@ - empty string] in reciver_result_file: $3 
-    # lfoe_path_to_var ::  insert \${HOME} into string '${HOME}'
-    # lfoe_gig_sh :: create $2 file in $1 dir from ${HOME}/aer_foe/.d/.sh/.lib.sh/.dta/.tml/sh1.tml
 
-    # cd ${dr_pth_fn_26103_30564} || return 1
-    # local dr_1_fn_26103_30564=${dr_pth_fn_26103_30564}/${arg_1_fn_26103_30564}
-    # local fl_1_fn_26103_30564=${dr_pth_fn_26103_30564}/${arg_1_fn_26103_30564}
-    # contane {\fn_nm\} {{body}}
-echo "this flow1.tst"
+	# l_02_fs2f ins.f {{pre_str_in_rcv.f}} rcv.f
+	# l_02_s2f :: reciver_string: $1 inserter_string: $2 [@ - empty string] in reciver_result_file: $3
+	# lfoe_path_to_var ::  insert \${HOME} into string '${HOME}'
+	# lfoe_gig_sh :: create $2 file in $1 dir from ${HOME}/aer_foe/.d/.sh/.lib.sh/.dta/.tml/sh1.tml
+
+	# cd ${dr_pth_fn_26103_30564} || return 1
+	# local dr_1_fn_26103_30564=${dr_pth_fn_26103_30564}/${arg_1_fn_26103_30564}
+	# local fl_1_fn_26103_30564=${dr_pth_fn_26103_30564}/${arg_1_fn_26103_30564}
+	# contane {\fn_nm\} {{body}}
+	echo "this flow1.tst"
 
 	#.. get dr nn (NNN)
 	eval "local nn_dr=\$(realpath \${dr_pth_fn_${rnd}}/../../../)"
@@ -74,15 +74,15 @@ echo "this flow1.tst"
 	cd $flow1_tst_d || return 1
 	: >res.d/res.f
 
-	l_00_echo_code "$fn_nm 1"
-	$fn_nm 1
-	
+	l_00_echo_code "$fn_nm 5"
+	$fn_nm 5
+
 	#.. for .doc
 	: >"$flow1_tst_d"/flow1.tst.doc
-	echo "exec:: '$fn_nm 1'" >>"$flow1_tst_d"/flow1.tst.doc
-	$fn_nm 1 >>"$flow1_tst_d"/flow1.tst.doc
+	echo "exec:: '$fn_nm 5'" >>"$flow1_tst_d"/flow1.tst.doc
+	$fn_nm 5 >>"$flow1_tst_d"/flow1.tst.doc
 
-	$fn_nm 1 >&res.d/res.f
+	$fn_nm 5 >&res.d/res.f
 
 	if diff -q res.d/res.f exa.d/exa.f >&/dev/null; then
 		l_00_echo_succ "SUCC_TST_FN::$fn_nm in $flow1_tst_d return 0"
@@ -91,13 +91,13 @@ echo "this flow1.tst"
 		diff res.d/res.f exa.d/exa.f
 		l_00_echo_fail "FAIL_TST_FN::$fn_nm in $flow1_tst_d return 1"
 	fi
-	
+
 	#* work with fn_nm STOP ----------------------
 
 	#.. get default PATH
 	PATH=$(getconf PATH)
 	l_00_echo_info "default :: \${PATH}=${PATH}"
-    return 0
+	return 0
 
 }
 
