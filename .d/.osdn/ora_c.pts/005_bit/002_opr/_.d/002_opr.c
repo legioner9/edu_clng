@@ -1,0 +1,41 @@
+// {{hint}}
+//
+#include "edu_clang_c.h"
+#include <stdio.h>
+
+void print_bit_byte(unsigned char aBy);
+
+int main(int argc, char **argv) {
+
+    char *arg0 = argv[0];
+    char *arg1 = argv[1];
+    printf("arg0=%s, arg1=%s\n", arg0, arg1);
+
+    unsigned char uby = 0x33;
+    // unsigned char uby = 0b01000010;
+    print_bit_byte(uby);
+    printf("%i\n", uby);
+
+    a_edu_clang_c();
+
+    return 0;
+}
+
+void print_bit_byte(unsigned char aBy) {
+    char cini = 128;
+    for (char i = 0; i < 8; i++) {
+        printf("%c", cini & aBy);
+        cini /= 2;
+    }
+    // printf("%c", (0b10000000 & aBy) ? '1' : '0');
+    // printf("%c", (0b01000000 & aBy) ? '1' : '0');
+    // printf("%c", (0b00100000 & aBy) ? '1' : '0');
+    // printf("%c", (0b00010000 & aBy) ? '1' : '0');
+    // printf("%c", (0b00001000 & aBy) ? '1' : '0');
+    // printf("%c", (0b00000100 & aBy) ? '1' : '0');
+    // printf("%c", (0b00000010 & aBy) ? '1' : '0');
+    // printf("%c", (0b00000001 & aBy) ? '1' : '0');
+    // printf("\n");
+
+    // printf("%c\n", (4 & 2) ? '1' : '0'); //! 0
+}
