@@ -1,5 +1,10 @@
 arg0=003_str2spcu, arg1=avkr
+s=0x7ffec147d569
 c=a
 c=v
 c=k
 c=r
+q=0x7ffec147d569, s-q=(%p)(nil) ,s-q=(%i)0 c=a
+q=0x7ffec147d56a, s-q=(%p)0x1 ,s-q=(%i)1 c=v
+q=0x7ffec147d56b, s-q=(%p)0x2 ,s-q=(%i)2 c=k
+q=0x7ffec147d56c, s-q=(%p)0x3 ,s-q=(%i)3 c=r
