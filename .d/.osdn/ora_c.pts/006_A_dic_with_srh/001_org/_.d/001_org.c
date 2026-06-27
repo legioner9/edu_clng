@@ -1,12 +1,39 @@
 // {{hint}}
 //
+/* Простой словарь. */
+#include <ctype.h>
 #include <stdio.h>
-
-int main(int argc, char** argv) {
-
-    char *arg0 = argv[0];
-    char *arg1 = argv[1];
-    printf("arg0=%s, arg1=%s\n", arg0, arg1);
-
+#include <string.h>
+/* список слов и их значений */
+char *dic[][40] = {
+    "атлас",      "Том географических и/или топографических карт.",
+    "автомобиль", "Моторизоравонное средство передвижения.",
+    "телефон",    "Средство связи.",
+    "самолет",    "Летающая машина.",
+    "",           "" /* нули, завершающие список */
+};
+int main(void) {
+    char word[80], ch;
+    char **p;
+    do {
+        puts("\nВведите слово: ");
+        scanf("%s", word);
+        p = (char **)dic;
+        /* поиск слова в словаре и вывод его значения */
+        do {
+            if (!strcmp(*p, word)) {
+                puts("Значение:");
+                puts(*(p + 1));
+                break;
+            }
+            if (!strcmp(*p, word))
+                break;
+            p = p + 2; /* продвижение по списку */
+        } while (*p);
+        if (!*p)
+            puts("Слово в словаре отсутствует.");
+        printf("Будете еще вводить? (y/n): ");
+        scanf(" %c%*c", &ch);
+    } while (toupper(ch) != 'N');
     return 0;
 }
