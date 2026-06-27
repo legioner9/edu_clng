@@ -7,8 +7,8 @@ ora_dr=${HOME}/edu_clng/.d/.osdn/ora_c.pts
 frm_14=${ora_dr}/.frm.14.v2
 gig_dr_sh=${frm_14}/gig_dr.sh
 
-main_theme=005_bit
-sub_theme=002_opr
+main_theme=006_A_dic_with_srh
+sub_theme=001_org
 
 . ${gig_dr_sh} \
 	${ora_dr}/${main_theme}/${sub_theme} \
