@@ -11,7 +11,7 @@ int main(int argc, char **argv) {
     char *arg1 = argv[1];
     printf("arg0=%s, arg1=%s\n", arg0, arg1);
 
-    unsigned char uby = 0x35;
+    unsigned char uby = 0xf0;
     // unsigned char uby = 0b01000010;
     print_bit_byte(uby);
     printf("%i\n", uby);
