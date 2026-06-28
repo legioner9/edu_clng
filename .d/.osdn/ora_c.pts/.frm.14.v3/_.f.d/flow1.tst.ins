@@ -1,0 +1,51 @@
+echo "this flow1.tst"
+
+	#.. get dr nn (NNN)
+	eval "local nn_dr=\$(realpath \${dr_pth_fn_${rnd}}/../../../)"
+	l_00_echo_info "\$nn_dr=$nn_dr"
+
+	#.. get name fn.c as nm dr
+	local fn_nm="$(l_01_prs_f -n $(realpath ${nn_dr}/..))"
+	l_00_echo_info "\$fn_nm=$fn_nm"
+
+	#.. add PATH /.bin
+	PATH=$PATH:$nn_dr/_.d/.bin
+
+	# #.. exec fn.c for check
+	# l_00_echo_code $fn_nm
+	# $fn_nm
+
+	#.. get flow1.tst.d pth
+	local flow1_tst_d=$nn_dr/_.d/.tst/flow1.tst.d
+	l_00_echo_info "\$flow1_tst_d=$flow1_tst_d"
+
+	l_00_echo_info "\${PATH}=${PATH}"
+
+	#* work with fn_nm START ----------------------
+
+	cd $flow1_tst_d || return 1
+	: >res.d/res.f
+
+	l_00_echo_code "$fn_nm 1"
+	$fn_nm 1
+	
+	#.. for .doc
+	: >"$flow1_tst_d"/flow1.tst.doc
+	echo "exec:: '$fn_nm 1'" >>"$flow1_tst_d"/flow1.tst.doc
+	$fn_nm 1 >>"$flow1_tst_d"/flow1.tst.doc
+
+	$fn_nm 1 >&res.d/res.f
+
+	if diff -q res.d/res.f exa.d/exa.f >&/dev/null; then
+		l_00_echo_succ "SUCC_TST_FN::$fn_nm in $flow1_tst_d return 0"
+	else
+		l_00_echo_code "diff res.d/res.f exa.d/exa.f"
+		diff res.d/res.f exa.d/exa.f
+		l_00_echo_fail "FAIL_TST_FN::$fn_nm in $flow1_tst_d return 1"
+	fi
+
+	#* work with fn_nm STOP ----------------------
+
+	#.. get default PATH
+	PATH=$(getconf PATH)
+	l_00_echo_info "default::\${PATH}=${PATH}"

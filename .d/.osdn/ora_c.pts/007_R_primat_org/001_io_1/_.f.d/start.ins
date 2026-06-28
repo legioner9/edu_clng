@@ -1,0 +1,41 @@
+	eval "local dr_pth_fn_in=\${dr_pth_fn_${rnd}}/_.d"
+
+	l_00_echo_info "\$dr_pth_fn_in=$dr_pth_fn_in"
+
+	local fn_c_dr=$(realpath ${dr_pth_fn_in}/../../)
+	l_00_echo_info "\$fn_c_dr=$fn_c_dr"
+
+	local cfn_nm=$(l_01_prs_f -n $fn_c_dr)
+	l_00_echo_info "\$cfn_nm=$cfn_nm"
+
+	cd ${dr_pth_fn_in} || return 1
+
+	make clean
+	make hello
+	# make hello_gdb
+
+	l_00_echo_code "./hello.cxe"
+	./hello.cxe
+	echo
+
+	l_00_echo_code "echo \$?"
+	echo $?
+
+	eval "local bin_fl=\$(l_01_prs_f -n \${fl_nm_fn_${rnd}})"
+
+	rm -fr .bin
+	mkdir .bin
+	cp -fv hello.cxe .bin/${cfn_nm}
+
+	# __PATH=${PATH}
+
+	# eval "export PATH=\$PATH:\${dr_pth_fn_${rnd}}/_.d/.bin"
+	# l_00_echo_code ${cfn_nm}
+	# ${cfn_nm}
+
+	l_00_echo_code ". ${dr_pth_fn_in}/.tst/start_this_tst.sh"
+	. $dr_pth_fn_in/.tst/start_this_tst.sh
+
+	# l_00_echo_info "\${PATH}=${PATH}"
+	# PATH=$(getconf PATH)
+	# l_00_echo_info "\${PATH}=${PATH}"

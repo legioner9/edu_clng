@@ -1,17 +1,17 @@
 #!/bin/bash
 
-fn_13390_7193() {
+fn_123408_17931() {
 
-	local pth_to_gig_sh_fn_13390_7193="${HOME}/edu_clng/.d/.osdn/ora_c.pts/.frm.14.v2/gig_dr.sh"
-	local sgn_fn_13390_7193="${pth_to_gig_sh_fn_13390_7193}"
+	local pth_to_gig_sh_fn_123408_17931="${HOME}/edu_clng/.d/.osdn/ora_c.pts/.frm.14.v3/gig_dr.sh"
+	local sgn_fn_123408_17931="${pth_to_gig_sh_fn_123408_17931}"
 
-	if [[ -z ${pth_to_gig_sh_fn_13390_7193} ]]; then
+	if [[ -z ${pth_to_gig_sh_fn_123408_17931} ]]; then
 		echo -e "${ECHO_RET1}in file://$fl_pth_fn_11604_520 , line=${LINENO}  pth_to_gig_sh_fn NOT_DEFINE, return 1${NRM}" >&2
 		return 1
 	fi
 
-	if [[ ! -f ${pth_to_gig_sh_fn_13390_7193} ]]; then
-		echo -e "${ECHO_RET1}in file://$fl_pth_fn_11604_520 , line=${LINENO}  $pth_to_gig_sh_fn_13390_7193 NOT_FILE, return 1${NRM}" >&2
+	if [[ ! -f ${pth_to_gig_sh_fn_123408_17931} ]]; then
+		echo -e "${ECHO_RET1}in file://$fl_pth_fn_11604_520 , line=${LINENO}  $pth_to_gig_sh_fn_123408_17931 NOT_FILE, return 1${NRM}" >&2
 		return 1
 	fi
 
@@ -34,59 +34,59 @@ fn_13390_7193() {
 		return 0
 	}
 
-	local fl_pth_fn_13390_7193="${pth_to_gig_sh_fn_13390_7193}"
-	local dr_pth_fn_13390_7193=$(dirname ${pth_to_gig_sh_fn_13390_7193})
-	local fl_nm_fn_13390_7193=$(basename ${pth_to_gig_sh_fn_13390_7193})
+	local fl_pth_fn_123408_17931="${pth_to_gig_sh_fn_123408_17931}"
+	local dr_pth_fn_123408_17931=$(dirname ${pth_to_gig_sh_fn_123408_17931})
+	local fl_nm_fn_123408_17931=$(basename ${pth_to_gig_sh_fn_123408_17931})
 
-	local hist_this_lst=${dr_pth_fn_13390_7193}/gig_dr.hst.lst
+	local hist_this_lst=${dr_pth_fn_123408_17931}/gig_dr.hst.lst
 
 	# l_02_fs2f ins.f {{body}} rcv.f
 	# {{body}}
 
-	local arg1_13390_7193="$1"
-	local arg2_13390_7193="$2"
-	local arg3_13390_7193="$3"
-	local arg4_13390_7193="$4"
+	local arg1_123408_17931="$1"
+	local arg2_123408_17931="$2"
+	local arg3_123408_17931="$3"
+	local arg4_123408_17931="$4"
 
-	#! arg2=${dr_pth_fn_13390_7193}/_.f.d
-	local dr_f_d=${dr_pth_fn_13390_7193}/_.f.d
-	#! ${arg2_13390_7193}->${dr_f_d}
+	#! arg2=${dr_pth_fn_123408_17931}/_.f.d
+	local dr_f_d=${dr_pth_fn_123408_17931}/_.f.d
+	#! ${arg2_123408_17931}->${dr_f_d}
 
 	#! arf3=arg2
 
-	sgn_fn_13390_7193=". $fl_pth_fn_13390_7193 ${arg1_13390_7193} ${arg2_13390_7193} ${arg3_13390_7193}"
-	# sgn_fn_13390_7193=". $fl_pth_fn_13390_7193 ${arg1_13390_7193} ${dr_f_d} ${arg2_13390_7193} ${arg4_13390_7193}"
+	sgn_fn_123408_17931=". $fl_pth_fn_123408_17931 ${arg1_123408_17931} ${arg2_123408_17931} ${arg3_123408_17931}"
+	# sgn_fn_123408_17931=". $fl_pth_fn_123408_17931 ${arg1_123408_17931} ${dr_f_d} ${arg2_123408_17931} ${arg4_123408_17931}"
 
 	if [[ -z "${dr_f_d}" ]]; then
-		echo -e "${ECHO_RET1}in file://$fl_pth_fn_13390_7193 , line=${LINENO}  ARG2_ISEMPTY, return 1${NRM}" >&2
+		echo -e "${ECHO_RET1}in file://$fl_pth_fn_123408_17931 , line=${LINENO}  ARG2_ISEMPTY, return 1${NRM}" >&2
 		return 1
 	fi
 
 	if [[ ! -d ${dr_f_d} ]]; then
 
-		echo -e "${ECHO_RET1}in file://$fl_pth_fn_13390_7193 , line=${LINENO} [[that insert file]] ARG2_NOTDIR::${dr_f_d}, return 1${NRM}" >&2
+		echo -e "${ECHO_RET1}in file://$fl_pth_fn_123408_17931 , line=${LINENO} [[that insert file]] ARG2_NOTDIR::${dr_f_d}, return 1${NRM}" >&2
 		return 1
 
 	fi
 
-	cd ${dr_pth_fn_13390_7193} || return 1
+	cd ${dr_pth_fn_123408_17931} || return 1
 
-	if [[ -z "${arg1_13390_7193}" ]]; then
+	if [[ -z "${arg1_123408_17931}" ]]; then
 
-		echo -e "${ECHO_RET1}in file://$fl_pth_fn_13390_7193 , line=${LINENO}  ARGS1_nm_dr is empty, return 1${NRM}" >&2
+		echo -e "${ECHO_RET1}in file://$fl_pth_fn_123408_17931 , line=${LINENO}  ARGS1_nm_dr is empty, return 1${NRM}" >&2
 		return 1
 
 	fi
 
-	# local result_dr="${dr_pth_fn_13390_7193}/${arg1_13390_7193}"
+	# local result_dr="${dr_pth_fn_123408_17931}/${arg1_123408_17931}"
 
 	#! ptr_path
-	local result_dr="${arg1_13390_7193}"
+	local result_dr="${arg1_123408_17931}"
 	result_dr="$(l_01_abs_path "$(pwd)" "result_dr")"
 
 	if [[ -d "${result_dr}" ]]; then
 
-		echo -e "${ECHO_RET1}in file://$fl_pth_fn_13390_7193 , line=${LINENO}  ${arg1_13390_7193} IS_DIR, return 1${NRM}" >&2
+		echo -e "${ECHO_RET1}in file://$fl_pth_fn_123408_17931 , line=${LINENO}  ${arg1_123408_17931} IS_DIR, return 1${NRM}" >&2
 		return 1
 
 	fi
@@ -94,21 +94,21 @@ fn_13390_7193() {
 	mkdir -pv ${result_dr} || return 1
 	touch ${result_dr}/../_0
 
-	echo "cp -rv ${dr_pth_fn_13390_7193}/_.d ${result_dr}"
-	cp -rv ${dr_pth_fn_13390_7193}/_.d ${result_dr} || return 1
+	echo "cp -rv ${dr_pth_fn_123408_17931}/_.d ${result_dr}"
+	cp -rv ${dr_pth_fn_123408_17931}/_.d ${result_dr} || return 1
 
-	echo "cp -r ${dr_pth_fn_13390_7193}/_.f.d ${result_dr}"
-	cp -rv ${dr_pth_fn_13390_7193}/_.f.d ${result_dr} || return 1
+	echo "cp -r ${dr_pth_fn_123408_17931}/_.f.d ${result_dr}"
+	cp -rv ${dr_pth_fn_123408_17931}/_.f.d ${result_dr} || return 1
 
-	if [[ -n "${arg2_13390_7193}" ]]; then
+	if [[ -n "${arg2_123408_17931}" ]]; then
 
-		echo "main.c -> ${arg2_13390_7193} as arg3"
-		mv ${result_dr}/_.d/main.c ${result_dr}/_.d/${arg2_13390_7193}
+		echo "main.c -> ${arg2_123408_17931} as arg3"
+		mv ${result_dr}/_.d/main.c ${result_dr}/_.d/${arg2_123408_17931}
 
 		# l_02_s2f :: reciver_string: $1 inserter_string: $2 [@ - empty string] in reciver_result_file: $3
-		l_02_s2f "main.c" ${arg2_13390_7193} ${result_dr}/_.d/makefile
+		l_02_s2f "main.c" ${arg2_123408_17931} ${result_dr}/_.d/makefile
 		# l_02_fs2f ins.f {{body}} rcv.f
-		l_02_fs2f "${HOME}/edu_clng/.d/.osdn/.hnt/clang.body.hnt" {{hint}} ${result_dr}/_.d/${arg2_13390_7193}
+		l_02_fs2f "${HOME}/edu_clng/.d/.osdn/.hnt/clang.body.hnt" {{hint}} ${result_dr}/_.d/${arg2_123408_17931}
 
 	fi
 
@@ -125,9 +125,9 @@ fn_13390_7193() {
 	echo "#DATE :: $(date)" >>${result_dr}/start.sh
 	echo "#DATE :: $(date)" >>${hist_this_lst}
 
-	echo "#SGN :: #$sgn_fn_13390_7193"
-	echo "#SGN :: $sgn_fn_13390_7193" >>${result_dr}/start.sh
-	echo "#SGN :: $sgn_fn_13390_7193" >>${hist_this_lst}
+	echo "#SGN :: #$sgn_fn_123408_17931"
+	echo "#SGN :: $sgn_fn_123408_17931" >>${result_dr}/start.sh
+	echo "#SGN :: $sgn_fn_123408_17931" >>${hist_this_lst}
 
 	lfoe_path_to_var ${result_dr}/start.sh
 
@@ -147,10 +147,10 @@ fn_13390_7193() {
 	touch ${result_dr}/__.nm
 	echo -e "#
 &&&dr :: 
-@@@cnt0 :: 
+@@@cnt :: 
 	" >${result_dr}/readme.this.man
 
-	#* PCH start ------------
+	#* PCH 26+0628_1810 start ------------
 	local up_res_dir=$(dirname ${result_dr})
 	if [[ ! -f ${up_res_dir}/readme.this.man ]]; then
 		echo -e "#
@@ -185,7 +185,7 @@ fn_13390_7193() {
 
 }
 
-fn_13390_7193 $@
+fn_123408_17931 $@
 
-#DATE :: Пн 15 июн 2026 00:58:14 +07
-#SGN :: . ${HOME}/aer_foe/.d/.frp/make_014.frp/frp2dr.sh ${HOME}/edu_clng/.d/.osdn/ora_c.pts/.frm.14.v2
+#DATE :: Вс 28 июн 2026 18:13:26 +07
+#SGN :: . ${HOME}/aer_foe/.d/.frp/make_014.frp/frp2dr.sh ${HOME}/edu_clng/.d/.osdn/ora_c.pts/.frm.14.v3
