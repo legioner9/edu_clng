@@ -43,3 +43,9 @@ echo "this flow1.tst"
 		diff res.d/res.f exa.d/exa.f
 		l_00_echo_fail "FAIL_TST_FN::$fn_nm in $flow1_tst_d return 1"
 	fi
+
+	#* work with fn_nm STOP ----------------------
+
+	#.. get default PATH
+	PATH=$(getconf PATH)
+	l_00_echo_info "default::\${PATH}=${PATH}"

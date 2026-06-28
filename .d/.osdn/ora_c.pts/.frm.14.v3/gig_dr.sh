@@ -152,6 +152,10 @@ fn_123408_17931() {
 
 	#* PCH 26+0628_1810 start ------------
 	local up_res_dir=$(dirname ${result_dr})
+	
+	echo "\${up_res_dir}=${up_res_dir}"
+	read -p "1"
+
 	if [[ ! -f ${up_res_dir}/readme.this.man ]]; then
 		echo -e "#
 &&&dr :: 

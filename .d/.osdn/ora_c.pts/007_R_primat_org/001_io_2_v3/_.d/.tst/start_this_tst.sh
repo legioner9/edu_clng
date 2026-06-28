@@ -1,21 +1,21 @@
 #!/bin/bash
 
-fn_28471_30379(){
+fn_7389_12882(){
 
-    local fl_pth_fn_28471_30379="${HOME}/edu_clng/.d/.osdn/ora_c.pts/007_R_primat_org/001_io_2_v3/_.d/.tst/start_this_tst.sh"
-    local dr_pth_fn_28471_30379=$(dirname ${HOME}/edu_clng/.d/.osdn/ora_c.pts/007_R_primat_org/001_io_2_v3/_.d/.tst/start_this_tst.sh)
-    local fl_nm_fn_28471_30379=$(basename ${HOME}/edu_clng/.d/.osdn/ora_c.pts/007_R_primat_org/001_io_2_v3/_.d/.tst/start_this_tst.sh)
-    local rnd=28471_30379
+    local fl_pth_fn_7389_12882="${HOME}/edu_clng/.d/.osdn/ora_c.pts/007_R_primat_org/001_io_2_v3/_.d/.tst/start_this_tst.sh"
+    local dr_pth_fn_7389_12882=$(dirname ${HOME}/edu_clng/.d/.osdn/ora_c.pts/007_R_primat_org/001_io_2_v3/_.d/.tst/start_this_tst.sh)
+    local fl_nm_fn_7389_12882=$(basename ${HOME}/edu_clng/.d/.osdn/ora_c.pts/007_R_primat_org/001_io_2_v3/_.d/.tst/start_this_tst.sh)
+    local rnd=7389_12882
 
     # [[ -z "$1" ]] && {
     #     # snp "out_err"
-    #     echo -e "${ECHO_RET1}in file://$fn_nm_fn_28471_30379 , line=${LINENO} :: ARG_1_NOT_DEFINE is ..., return 1${NRM}" >&2
+    #     echo -e "${ECHO_RET1}in file://$fn_nm_fn_7389_12882 , line=${LINENO} :: ARG_1_NOT_DEFINE is ..., return 1${NRM}" >&2
     #     return 1
     # }
 
     [[ "$1" == "-h" ]] && {
         echo -e "
-        this -h for fl_pth_fn_28471_30379 ::
+        this -h for fl_pth_fn_7389_12882 ::
         doing :: 
             exa use ::
             far use ::
@@ -23,18 +23,18 @@ fn_28471_30379(){
         return 0
     }
 
-    local arg_1_fn_28471_30379="$1"
-    local arg_2_fn_28471_30379="$2"
-    local arg_3_fn_28471_30379="$3"
+    local arg_1_fn_7389_12882="$1"
+    local arg_2_fn_7389_12882="$2"
+    local arg_3_fn_7389_12882="$3"
 
 	# [[ -z "$2" ]] && {
 	# 	# snp "out_err"
-	# 	echo -e "${ECHO_RET1}in file://$fn_nm_fn_28471_30379 , line=${LINENO} :: ARG_2_NOT_DEFINE is ..., return 1${NRM}" >&2
+	# 	echo -e "${ECHO_RET1}in file://$fn_nm_fn_7389_12882 , line=${LINENO} :: ARG_2_NOT_DEFINE is ..., return 1${NRM}" >&2
 	# 	return 1
 	# }
 
 	#! ptr_path
-	# local ptr_path_1="$arg_1_fn_28471_30379"
+	# local ptr_path_1="$arg_1_fn_7389_12882"
 	# ptr_path_1="$(l_01_abs_path "$(pwd)" "ptr_path_1")"
  
     # l_02_fs2f ins.f {{pre_str_in_rcv.f}} rcv.f
@@ -42,9 +42,9 @@ fn_28471_30379(){
     # lfoe_path_to_var ::  insert \${HOME} into string '${HOME}'
     # lfoe_gig_sh :: create $2 file in $1 dir from ${HOME}/aer_foe/.d/.sh/.lib.sh/.dta/.tml/sh1.tml
 
-    # cd ${dr_pth_fn_28471_30379} || return 1
-    # local dr_1_fn_28471_30379=${dr_pth_fn_28471_30379}/${arg_1_fn_28471_30379}
-    # local fl_1_fn_28471_30379=${dr_pth_fn_28471_30379}/${arg_1_fn_28471_30379}
+    # cd ${dr_pth_fn_7389_12882} || return 1
+    # local dr_1_fn_7389_12882=${dr_pth_fn_7389_12882}/${arg_1_fn_7389_12882}
+    # local fl_1_fn_7389_12882=${dr_pth_fn_7389_12882}/${arg_1_fn_7389_12882}
     # contane {\fn_nm\} {{body}}
 	eval "local nn_dr=\${dr_pth_fn_${rnd}}/../../"
 
@@ -61,4 +61,4 @@ fn_28471_30379(){
 
 }
 
-fn_28471_30379 $@
+fn_7389_12882 $@

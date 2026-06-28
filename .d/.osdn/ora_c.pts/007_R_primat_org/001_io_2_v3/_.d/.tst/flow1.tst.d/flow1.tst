@@ -1,21 +1,21 @@
 #!/bin/bash
 
-fn_2528_10886(){
+fn_25576_25843(){
 
-    local fl_pth_fn_2528_10886="${HOME}/edu_clng/.d/.osdn/ora_c.pts/007_R_primat_org/001_io_2_v3/_.d/.tst/flow1.tst.d/flow1.tst"
-    local dr_pth_fn_2528_10886=$(dirname ${HOME}/edu_clng/.d/.osdn/ora_c.pts/007_R_primat_org/001_io_2_v3/_.d/.tst/flow1.tst.d/flow1.tst)
-    local fl_nm_fn_2528_10886=$(basename ${HOME}/edu_clng/.d/.osdn/ora_c.pts/007_R_primat_org/001_io_2_v3/_.d/.tst/flow1.tst.d/flow1.tst)
-    local rnd=2528_10886
+    local fl_pth_fn_25576_25843="${HOME}/edu_clng/.d/.osdn/ora_c.pts/007_R_primat_org/001_io_2_v3/_.d/.tst/flow1.tst.d/flow1.tst"
+    local dr_pth_fn_25576_25843=$(dirname ${HOME}/edu_clng/.d/.osdn/ora_c.pts/007_R_primat_org/001_io_2_v3/_.d/.tst/flow1.tst.d/flow1.tst)
+    local fl_nm_fn_25576_25843=$(basename ${HOME}/edu_clng/.d/.osdn/ora_c.pts/007_R_primat_org/001_io_2_v3/_.d/.tst/flow1.tst.d/flow1.tst)
+    local rnd=25576_25843
 
     # [[ -z "$1" ]] && {
     #     # snp "out_err"
-    #     echo -e "${ECHO_RET1}in file://$fn_nm_fn_2528_10886 , line=${LINENO} :: ARG_1_NOT_DEFINE is ..., return 1${NRM}" >&2
+    #     echo -e "${ECHO_RET1}in file://$fn_nm_fn_25576_25843 , line=${LINENO} :: ARG_1_NOT_DEFINE is ..., return 1${NRM}" >&2
     #     return 1
     # }
 
     [[ "$1" == "-h" ]] && {
         echo -e "
-        this -h for fl_pth_fn_2528_10886 ::
+        this -h for fl_pth_fn_25576_25843 ::
         doing :: 
             exa use ::
             far use ::
@@ -23,18 +23,18 @@ fn_2528_10886(){
         return 0
     }
 
-    local arg_1_fn_2528_10886="$1"
-    local arg_2_fn_2528_10886="$2"
-    local arg_3_fn_2528_10886="$3"
+    local arg_1_fn_25576_25843="$1"
+    local arg_2_fn_25576_25843="$2"
+    local arg_3_fn_25576_25843="$3"
 
 	# [[ -z "$2" ]] && {
 	# 	# snp "out_err"
-	# 	echo -e "${ECHO_RET1}in file://$fn_nm_fn_2528_10886 , line=${LINENO} :: ARG_2_NOT_DEFINE is ..., return 1${NRM}" >&2
+	# 	echo -e "${ECHO_RET1}in file://$fn_nm_fn_25576_25843 , line=${LINENO} :: ARG_2_NOT_DEFINE is ..., return 1${NRM}" >&2
 	# 	return 1
 	# }
 
 	#! ptr_path
-	# local ptr_path_1="$arg_1_fn_2528_10886"
+	# local ptr_path_1="$arg_1_fn_25576_25843"
 	# ptr_path_1="$(l_01_abs_path "$(pwd)" "ptr_path_1")"
  
     # l_02_fs2f ins.f {{pre_str_in_rcv.f}} rcv.f
@@ -42,9 +42,9 @@ fn_2528_10886(){
     # lfoe_path_to_var ::  insert \${HOME} into string '${HOME}'
     # lfoe_gig_sh :: create $2 file in $1 dir from ${HOME}/aer_foe/.d/.sh/.lib.sh/.dta/.tml/sh1.tml
 
-    # cd ${dr_pth_fn_2528_10886} || return 1
-    # local dr_1_fn_2528_10886=${dr_pth_fn_2528_10886}/${arg_1_fn_2528_10886}
-    # local fl_1_fn_2528_10886=${dr_pth_fn_2528_10886}/${arg_1_fn_2528_10886}
+    # cd ${dr_pth_fn_25576_25843} || return 1
+    # local dr_1_fn_25576_25843=${dr_pth_fn_25576_25843}/${arg_1_fn_25576_25843}
+    # local fl_1_fn_25576_25843=${dr_pth_fn_25576_25843}/${arg_1_fn_25576_25843}
     # contane {\fn_nm\} {{body}}
 echo "this flow1.tst"
 
@@ -91,8 +91,14 @@ echo "this flow1.tst"
 		diff res.d/res.f exa.d/exa.f
 		l_00_echo_fail "FAIL_TST_FN::$fn_nm in $flow1_tst_d return 1"
 	fi
+
+	#* work with fn_nm STOP ----------------------
+
+	#.. get default PATH
+	PATH=$(getconf PATH)
+	l_00_echo_info "default::\${PATH}=${PATH}"
     return 0
 
 }
 
-fn_2528_10886 $@
+fn_25576_25843 $@
