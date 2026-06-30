@@ -154,7 +154,7 @@ fn_123408_17931() {
 	local up_res_dir=$(dirname ${result_dr})
 	
 	echo "\${up_res_dir}=${up_res_dir}"
-	read -p "1"
+	# read -p "1"
 
 	if [[ ! -f ${up_res_dir}/readme.this.man ]]; then
 		echo -e "#
