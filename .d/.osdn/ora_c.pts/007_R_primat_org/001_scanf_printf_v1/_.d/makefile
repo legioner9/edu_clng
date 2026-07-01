@@ -24,10 +24,10 @@
 # .PHONY: - define only trg
 
 # includ_dr lib
-PTH_L1 = ${HOME}/edu_clng/.d/.osdn/ora_c.pts/007_R_primat_org/001_printf_v1/_.d/include
+PTH_L1 = ${HOME}/edu_clng/.d/.osdn/ora_c.pts/007_R_primat_org/001_scanf_printf_v1/_.d/include
 
 # all files in root dir
-PTH_M1 = ${HOME}/edu_clng/.d/.osdn/ora_c.pts/007_R_primat_org/001_printf_v1/_.d
+PTH_M1 = ${HOME}/edu_clng/.d/.osdn/ora_c.pts/007_R_primat_org/001_scanf_printf_v1/_.d
 
 PTH_AER_FOE_C_CRL = ${HOME}/aer_foe/.d/.crl/aer_foe_c.crl.d/aer_foe_c.crl
 PTH_EDU_CLANG_C_CRL = ${HOME}/edu_clng/.d/.crl/edu_clang_c.crl.d/edu_clang_c.crl
