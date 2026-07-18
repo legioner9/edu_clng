@@ -1,4 +1,4 @@
 exec:: '002_str2dig 5'
-ptr_n=0x7f8d5f8eaab0, *ptr_n=0
-pchar=0x7f8d5f8eaab0, *pchar=5
-ptr_n=0x7f8d5f8eaab0, *ptr_n=5
+ptr_n=0x7f7fcc06cab0, *ptr_n=0
+pchar=0x7f7fcc06cab0, *pchar=5
+ptr_n=0x7f7fcc06cab0, *ptr_n=5

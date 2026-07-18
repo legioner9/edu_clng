@@ -64,9 +64,9 @@ fn_16282_14717(){
 
 	l_00_echo_code "./hello.cxe"
 	./hello.cxe
-	echo
+	# echo
 
-	l_00_echo_code "echo \$?"
+	# l_00_echo_code "echo \$?"
 	echo $?
 
 	eval "local bin_fl=\$(l_01_prs_f -n \${fl_nm_fn_${rnd}})"
@@ -81,8 +81,8 @@ fn_16282_14717(){
 	# l_00_echo_code ${cfn_nm}
 	# ${cfn_nm}
 
-	l_00_echo_code ". ${dr_pth_fn_in}/.tst/start_this_tst.sh"
-	. $dr_pth_fn_in/.tst/start_this_tst.sh
+	# l_00_echo_code ". ${dr_pth_fn_in}/.tst/start_this_tst.sh"
+	# . $dr_pth_fn_in/.tst/start_this_tst.sh
 
 	# l_00_echo_info "\${PATH}=${PATH}"
 	# PATH=$(getconf PATH)
