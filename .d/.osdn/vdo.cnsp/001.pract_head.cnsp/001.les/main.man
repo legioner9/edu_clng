@@ -2,3 +2,13 @@
     num !=0 => true
     num =0  => false
 
+## side effect
+```c
+// mast be n==0 false
+if(n=0){ // allways false
+
+}
+```
+### assinment return:
+- (n=5)(return)=>5
+- m=n=5 chain assinment
