@@ -1,5 +1,5 @@
 first:
-	echo "define goal"
+	echo "empty goal"
 
 main: main.o
 	gcc main.o -o main.cxe
