@@ -1,0 +1,4 @@
+# not bulean
+    num !=0 => true
+    num =0  => false
+
