@@ -93,6 +93,11 @@ fn_14866_1223() {
 	make main_c
 	l_00_echo_code "make main_s"
 	make main_s
+	l_00_echo_code "make main"
+	make main
+	l_00_echo_code "./main.cxe ; echo \$?"
+	./main.cxe
+	echo $?
 
 	# {{body}}
 
