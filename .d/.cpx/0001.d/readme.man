@@ -1,2 +1,3 @@
+# socket theme
 # tail -f [file] - wating change of file > stdout
 ## dmesg 2>1 > log.txt :: tail -f log.txt - all err msg
